@@ -23,7 +23,7 @@ export default function Testimonials() {
         <div className="testimonials">
           {data.map((t, i) => (
             <blockquote key={i} className="testimonial">
-              <p>"{t.quote}"</p>
+              <p>&ldquo;{t.quote}&rdquo;</p>
               <cite>- {t.by}</cite>
             </blockquote>
           ))}
