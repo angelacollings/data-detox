@@ -28,6 +28,15 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial;
+  color: #111;
+  background: #f7f7f9;
 }
 
 h1 {
@@ -65,4 +74,79 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  padding: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0 0 16px;
+  font-size: 28px;
+}
+
+.profile {
+  display: flex;
+  gap: 16px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 28px;
+  color: #475569;
+}
+
+.info h2 {
+  margin: 0 0 4px;
+}
+
+.info .title {
+  margin: 0 0 8px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.info .location {
+  margin: 0 0 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.info .bio {
+  margin: 0;
+  color: #374151;
+  line-height: 1.4;
 }
