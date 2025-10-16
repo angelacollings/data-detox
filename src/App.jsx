@@ -1,23 +1,25 @@
 import React from 'react';
-import Profile from './components/Profile';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Stats from './components/Stats';
+import Testimonials from './components/Testimonials';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
+import './index.css';
 
 export default function App() {
-  const user = {
-    name: 'Donna Sample',
-    title: 'Data Guru',
-    location: 'Remote',
-    bio: 'I help real estate agents make the most of their data.',
-    avatar: null,
-  };
-
   return (
-    <div className="app-container">
-      <header>
-        <h1>Profile</h1>
-      </header>
+    <div className="site">
+      <Header />
       <main>
-        <Profile {...user} />
+        <Hero />
+        <Services />
+        <Stats />
+        <Testimonials />
+        <ContactForm />
       </main>
+      <Footer />
     </div>
   );
 }
