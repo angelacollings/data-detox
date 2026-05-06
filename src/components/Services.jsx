@@ -2,16 +2,16 @@ import React from 'react';
 
 const items = [
   {
-    title: 'Data Cleanup',
-    desc: 'Verify contact info by calling and updating names, phones, and emails. Remove duplicates and flag bad records.',
+    title: 'Database Cleaning',
+    desc: 'Clean duplicate, outdated, and incomplete CRM records so agents can trust the data they are working from.',
   },
   {
-    title: 'Contact Verification',
-    desc: 'Live phone checks and soft-tries to connect so you only keep engaged contacts.',
+    title: 'Appraisal Calling',
+    desc: 'Call through your database with a professional real estate approach to update details and uncover appraisal opportunities.',
   },
   {
-    title: 'Appraisal Leads',
-    desc: 'Offer quick, friendly appraisal invitations — generate appraisal opportunities while cleaning your list.',
+    title: 'Desktop Appraisals',
+    desc: 'Prepare desktop appraisal support for agents who need fast, practical property insights before the next conversation.',
   },
 ];
 
@@ -19,7 +19,13 @@ export default function Services() {
   return (
     <section id="services" className="section">
       <div className="container">
-        <h3 className="section-title">Services</h3>
+        <div className="section-header">
+          <h3 className="section-title">Services</h3>
+          <p>
+            Practical support for agents who have useful contacts buried inside
+            messy, outdated, or underworked databases.
+          </p>
+        </div>
         <div className="services-grid">
           {items.map((s) => (
             <article key={s.title} className="service">

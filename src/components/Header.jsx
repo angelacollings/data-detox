@@ -5,8 +5,8 @@ export default function Header() {
     <header className="site-header">
       <div className="container">
         <div className="brand">
-          <h1>Donna&apos;s Data Detox</h1>
-          <p className="tag">Cleaner data. Better outreach.</p>
+          <h1>Data Detox</h1>
+          <p className="tag">Cleaner databases. Warmer appraisal conversations.</p>
         </div>
         <nav className="nav" aria-label="Main navigation">
           <a href="#services">Services</a>

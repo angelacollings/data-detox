@@ -5,20 +5,28 @@ import Services from './components/Services';
 import Stats from './components/Stats';
 import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
+import LegalPage, { getLegalPage } from './components/LegalPage';
 import Footer from './components/Footer';
 import './index.css';
 
 export default function App() {
+  const page = window.location.pathname.replace(/^\/+/, '') || 'home';
+  const legalPage = getLegalPage(page);
+
   return (
     <div className="site">
       <Header />
-      <main>
-        <Hero />
-        <Services />
-        <Stats />
-        <Testimonials />
-        <ContactForm />
-      </main>
+      {legalPage ? (
+        <LegalPage page={page} />
+      ) : (
+        <main>
+          <Hero />
+          <Services />
+          <Stats />
+          <Testimonials />
+          <ContactForm />
+        </main>
+      )}
       <Footer />
     </div>
   );

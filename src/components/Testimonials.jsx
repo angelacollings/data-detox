@@ -2,7 +2,7 @@ import React from 'react';
 
 const data = [
   {
-    quote: 'Donna cleaned our old list and boosted open rates immediately.',
+    quote: 'Data Detox cleaned our old list and boosted open rates immediately.',
     by: 'Alex R., Brokerage Owner',
   },
   {

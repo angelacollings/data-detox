@@ -5,21 +5,36 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero-inner">
         <div className="hero-text">
-          <h2>Phone calls. Data cleanup. Appraisals.</h2>
+          <h2>Turn your real estate database into appraisal opportunities.</h2>
           <p>
-            I call your contacts, verify and update records, remove duplicates,
-            and offer quick appraisals — so your CRM works for you.
+            We call through your CRM, clean and update contact records,
+            find appraisal conversations, and support agents with desktop
+            appraisals.
           </p>
           <a className="btn" href="#contact">
-            Get a free quote
+            Talk to us
           </a>
         </div>
         <div className="hero-card" aria-hidden>
-          <div className="card-avatar">D</div>
-          <div>
-            <strong>Donna Sample</strong>
-            <div className="muted">
-              Database cleanup & appraisal services for real estate agents
+          <div className="hero-card-header">
+            <div className="card-avatar">D</div>
+            <div>
+              <strong>Data Detox</strong>
+              <div className="muted">Real estate database support</div>
+            </div>
+          </div>
+          <div className="hero-card-list">
+            <div>
+              <span>01</span>
+              Clean CRM records
+            </div>
+            <div>
+              <span>02</span>
+              Call and update contacts
+            </div>
+            <div>
+              <span>03</span>
+              Surface appraisal opportunities
             </div>
           </div>
         </div>
