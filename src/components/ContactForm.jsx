@@ -17,7 +17,16 @@ export default function ContactForm() {
           </ul>
         </div>
 
-        <form action="/contact" method="POST" className="contact-form">
+        <form action="/contact.php" method="POST" className="contact-form">
+          <label className="form-extra-field" aria-hidden="true">
+            Website
+            <input
+              name="website"
+              type="text"
+              tabIndex="-1"
+              autoComplete="off"
+            />
+          </label>
           <div className="form-row">
             <label>
               Name

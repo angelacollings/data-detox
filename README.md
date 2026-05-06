@@ -49,13 +49,11 @@ Upload the contents of `dist/` to the SiteHost web root or configure SiteHost to
 
 ## Contact Form
 
-The contact form currently posts to `/contact`. That route still needs to be handled by the hosting/backend setup before the form can send real enquiries.
+The contact form posts to `/contact.php`, which is copied from `public/contact.php` into `dist/` during the Vite build.
 
-Options:
+The PHP handler sends enquiries to `hello@datadetox.co.nz` and includes basic validation, a honeypot field, origin/referrer checks, request size limits, and IP-based rate limiting.
 
-- Add a server-side `/contact` endpoint.
-- Connect the form to an email or CRM service.
-- Replace the form with a direct email link if a backend is not needed yet.
+The production Apache/PHP container must support PHP `mail()`, or the handler should be updated to use an authenticated SMTP provider. If the web server sends mail as `no-reply@datadetox.co.nz`, make sure SPF/DKIM/DMARC are configured so messages are not treated as spam.
 
 ## Content To Replace
 
