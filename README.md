@@ -45,7 +45,7 @@ Build output is generated in `dist/`.
 npm run build
 ```
 
-Upload the contents of `dist/` to the SiteHost web root or configure SiteHost to serve that folder as the static site output.
+Upload the contents of `dist/` to the SiteHost web root. On SiteHost Cloud Containers this maps to the container's `/container/application/public` directory.
 
 ## Contact Form
 
@@ -53,7 +53,9 @@ The contact form posts to `/contact.php`, which is copied from `public/contact.p
 
 The PHP handler sends enquiries to `hello@datadetox.co.nz` and includes basic validation, a honeypot field, origin/referrer checks, request size limits, and IP-based rate limiting.
 
-The production Apache/PHP container must support PHP `mail()`, or the handler should be updated to use an authenticated SMTP provider. The handler sends mail as `hello@datadetox.co.nz`; make sure SPF/DKIM/DMARC are configured so messages are not treated as spam.
+On SiteHost Cloud Containers, the handler first tries the internal SMTP relay at `smtpd:25`, matching SiteHost's container email guidance. Override this with `CONTACT_SMTP_HOST` and `CONTACT_SMTP_PORT` if the production container uses a different relay. If SMTP is unavailable, the handler falls back to PHP `mail()`.
+
+The handler sends mail as `hello@datadetox.co.nz`; make sure SPF/DKIM/DMARC are configured so messages are not treated as spam. After deployment, send one real test enquiry from the production site and confirm it arrives.
 
 ## Content To Replace
 

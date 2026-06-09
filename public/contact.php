@@ -4,6 +4,8 @@ declare(strict_types=1);
 const RECIPIENT_EMAIL = 'hello@datadetox.co.nz';
 const SITE_NAME = 'Data Detox';
 const FROM_EMAIL = 'hello@datadetox.co.nz';
+const DEFAULT_SMTP_HOST = 'smtpd';
+const DEFAULT_SMTP_PORT = 25;
 const MAX_POST_BYTES = 12000;
 const RATE_LIMIT_MAX_SUBMISSIONS = 5;
 const RATE_LIMIT_WINDOW_SECONDS = 3600;
@@ -189,6 +191,110 @@ function rate_limit_allows(string $ip): bool
     }
 }
 
+function smtp_config(): array
+{
+    $host = getenv('CONTACT_SMTP_HOST');
+    $port = getenv('CONTACT_SMTP_PORT');
+
+    return [
+        'host' => is_string($host) && trim($host) !== '' ? trim($host) : DEFAULT_SMTP_HOST,
+        'port' => is_string($port) && ctype_digit($port) ? (int) $port : DEFAULT_SMTP_PORT,
+    ];
+}
+
+function smtp_read($socket): string
+{
+    $response = '';
+
+    while (!feof($socket)) {
+        $line = fgets($socket, 515);
+        if ($line === false) {
+            break;
+        }
+
+        $response .= $line;
+        if (preg_match('/^\d{3}\s/', $line)) {
+            break;
+        }
+    }
+
+    return $response;
+}
+
+function smtp_command($socket, string $command, array $expectedCodes): bool
+{
+    fwrite($socket, $command . "\r\n");
+    $response = smtp_read($socket);
+    $code = (int) substr($response, 0, 3);
+
+    return in_array($code, $expectedCodes, true);
+}
+
+function smtp_data_safe(string $message): string
+{
+    $message = str_replace(["\r\n", "\r"], "\n", $message);
+    $lines = explode("\n", $message);
+    $lines = array_map(
+        static fn (string $line): string => str_starts_with($line, '.') ? '.' . $line : $line,
+        $lines
+    );
+
+    return implode("\r\n", $lines);
+}
+
+function send_smtp_mail(string $recipient, string $subject, string $body, array $headers): bool
+{
+    ['host' => $host, 'port' => $port] = smtp_config();
+
+    $socket = @fsockopen($host, $port, $errno, $errstr, 8);
+    if ($socket === false) {
+        return false;
+    }
+
+    stream_set_timeout($socket, 8);
+
+    try {
+        $greeting = smtp_read($socket);
+        if ((int) substr($greeting, 0, 3) !== 220) {
+            return false;
+        }
+
+        $serverName = $_SERVER['SERVER_NAME'] ?? 'datadetox.co.nz';
+        $serverName = is_string($serverName) ? header_safe($serverName) : 'datadetox.co.nz';
+
+        if (
+            !smtp_command($socket, 'EHLO ' . $serverName, [250]) &&
+            !smtp_command($socket, 'HELO ' . $serverName, [250])
+        ) {
+            return false;
+        }
+
+        if (
+            !smtp_command($socket, 'MAIL FROM:<' . FROM_EMAIL . '>', [250]) ||
+            !smtp_command($socket, 'RCPT TO:<' . $recipient . '>', [250, 251]) ||
+            !smtp_command($socket, 'DATA', [354])
+        ) {
+            return false;
+        }
+
+        $message = implode("\r\n", [
+            'To: ' . $recipient,
+            'Subject: ' . header_safe($subject),
+            ...$headers,
+            '',
+            $body,
+        ]);
+
+        fwrite($socket, smtp_data_safe($message) . "\r\n.\r\n");
+        $accepted = (int) substr(smtp_read($socket), 0, 3) === 250;
+        smtp_command($socket, 'QUIT', [221]);
+
+        return $accepted;
+    } finally {
+        fclose($socket);
+    }
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     send_response(405, 'Method not allowed', 'Please use the contact form to send an enquiry.');
 }
@@ -269,13 +375,17 @@ $headers = [
     'X-Mailer: PHP/' . phpversion(),
 ];
 
-$sent = mail(
-    RECIPIENT_EMAIL,
-    header_safe($subject),
-    $body,
-    implode("\r\n", $headers),
-    '-f' . FROM_EMAIL
-);
+$sent = send_smtp_mail(RECIPIENT_EMAIL, $subject, $body, $headers);
+
+if (!$sent) {
+    $sent = mail(
+        RECIPIENT_EMAIL,
+        header_safe($subject),
+        $body,
+        implode("\r\n", $headers),
+        '-f' . FROM_EMAIL
+    );
+}
 
 if (!$sent) {
     send_response(500, 'Message not sent', 'Something went wrong while sending your enquiry. Please try again later.');
