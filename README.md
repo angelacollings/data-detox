@@ -53,7 +53,7 @@ The contact form posts to `/contact.php`, which is copied from `public/contact.p
 
 The PHP handler sends enquiries to `hello@datadetox.co.nz` and includes basic validation, a honeypot field, origin/referrer checks, request size limits, and IP-based rate limiting.
 
-The production Apache/PHP container must support PHP `mail()`, or the handler should be updated to use an authenticated SMTP provider. If the web server sends mail as `no-reply@datadetox.co.nz`, make sure SPF/DKIM/DMARC are configured so messages are not treated as spam.
+The production Apache/PHP container must support PHP `mail()`, or the handler should be updated to use an authenticated SMTP provider. The handler sends mail as `hello@datadetox.co.nz`; make sure SPF/DKIM/DMARC are configured so messages are not treated as spam.
 
 ## Content To Replace
 

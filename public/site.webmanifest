@@ -1,0 +1,21 @@
+{
+  "name": "Data Detox",
+  "short_name": "Data Detox",
+  "icons": [
+    {
+      "src": "/assets/datadetox-icon-green-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/datadetox-icon-green-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#0f4a47",
+  "background_color": "#f6f7fb",
+  "display": "standalone"
+}

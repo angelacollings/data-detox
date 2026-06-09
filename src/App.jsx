@@ -10,7 +10,8 @@ import Footer from './components/Footer';
 import './index.css';
 
 export default function App() {
-  const page = window.location.pathname.replace(/^\/+/, '') || 'home';
+  const page =
+    window.location.pathname.replace(/^\/+/, '').replace(/\/+$/, '') || 'home';
   const legalPage = getLegalPage(page);
 
   return (

@@ -42,6 +42,17 @@ describe('App', () => {
     expect(screen.getByRole('link', { name: /Terms/i })).toBeDefined();
   });
 
+  it('links header navigation back to home sections', () => {
+    setPath('/terms');
+    render(<App />);
+    expect(screen.getByRole('link', { name: /Services/i }).getAttribute('href')).toBe(
+      '/#services',
+    );
+    expect(screen.getByRole('link', { name: /Contact/i }).getAttribute('href')).toBe(
+      '/#contact',
+    );
+  });
+
   it('renders privacy as a separate page', () => {
     setPath('/privacy');
     render(<App />);
@@ -49,6 +60,14 @@ describe('App', () => {
       screen.getByRole('heading', { level: 2, name: /Privacy Policy/i }),
     ).toBeDefined();
     expect(screen.queryByRole('link', { name: /Talk to us/i })).toBeNull();
+  });
+
+  it('renders legal pages with trailing slashes', () => {
+    setPath('/privacy/');
+    render(<App />);
+    expect(
+      screen.getByRole('heading', { level: 2, name: /Privacy Policy/i }),
+    ).toBeDefined();
   });
 
   it('renders terms as a separate page', () => {

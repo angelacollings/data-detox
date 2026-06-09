@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 const RECIPIENT_EMAIL = 'hello@datadetox.co.nz';
 const SITE_NAME = 'Data Detox';
-const FROM_EMAIL = 'no-reply@datadetox.co.nz';
+const FROM_EMAIL = 'hello@datadetox.co.nz';
 const MAX_POST_BYTES = 12000;
 const RATE_LIMIT_MAX_SUBMISSIONS = 5;
 const RATE_LIMIT_WINDOW_SECONDS = 3600;

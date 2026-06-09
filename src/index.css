@@ -1,16 +1,20 @@
 /* Design reset & variables */
 :root {
-  --bg: #f6f7fb;
+  --bg: #f4f8f6;
   --panel: #ffffff;
   --muted: #6b7280;
   --text: #0f172a;
-  --accent: #0f172a;
-  --border: #e6e9ef;
+  --accent: #2f806f;
+  --accent-dark: #0f4a47;
+  --accent-soft: #e8f3ee;
+  --accent-border: #a9cdbd;
+  --brand-dark: #0b3435;
+  --border: #dce8e3;
   --container: 1100px;
   --radius: 8px;
   --gap: 24px;
-  --shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-  --card-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  --shadow: 0 8px 30px rgba(15, 74, 71, 0.08);
+  --card-shadow: 0 6px 20px rgba(15, 74, 71, 0.07);
 }
 
 * {
@@ -39,7 +43,12 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 .site {
-  min-height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.site > main {
+  flex: 1;
 }
 
 /* layout container */
@@ -62,18 +71,38 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .brand h1 {
   margin: 0;
-  font-size: 18px;
-  font-weight: 700;
+  line-height: 1;
 }
-.brand .tag {
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 13px;
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand-logo img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+.brand-wordmark {
+  color: var(--brand-dark);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+.brand-wordmark em {
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 600;
 }
 .nav {
   display: flex;
@@ -88,14 +117,15 @@ body {
   border-radius: 8px;
 }
 .nav a:hover {
-  background: rgba(15, 23, 42, 0.03);
+  background: var(--accent-soft);
+  color: var(--accent-dark);
 }
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 46px;
-  background: var(--accent);
+  background: linear-gradient(180deg, #3a917d, var(--accent-dark));
   color: #fff;
   padding: 12px 18px;
   border: 1px solid var(--accent);
@@ -111,8 +141,8 @@ body {
     transform 160ms ease;
 }
 .btn:hover {
-  background: #1e293b;
-  border-color: #1e293b;
+  background: linear-gradient(180deg, #2f806f, #0b3435);
+  border-color: var(--accent-dark);
   transform: translateY(-1px);
 }
 
@@ -141,7 +171,7 @@ body {
 }
 
 .hero-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), var(--panel));
+  background: linear-gradient(180deg, #fffdf8, var(--panel));
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px;
@@ -158,13 +188,17 @@ body {
   width: 56px;
   height: 56px;
   border-radius: var(--radius);
-  background: #eef2ff;
+  background: var(--accent-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 20px;
-  color: #334155;
+  overflow: hidden;
+}
+.card-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .hero-card-list {
   display: grid;
@@ -183,9 +217,9 @@ body {
   width: 32px;
   height: 32px;
   border-radius: var(--radius);
-  background: #f8fafc;
-  border: 1px solid var(--border);
-  color: var(--muted);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  color: var(--accent-dark);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -223,6 +257,7 @@ body {
   padding: 18px;
   border-radius: var(--radius);
   box-shadow: var(--card-shadow);
+  border-top: 3px solid rgba(47, 128, 111, 0.36);
 }
 .service h4 {
   margin: 0 0 8px;
@@ -236,7 +271,7 @@ body {
 
 /* stats strip — stronger visual */
 .stats {
-  background: linear-gradient(180deg, #fff, #fbfbff);
+  background: linear-gradient(180deg, #fbfffd, #e8f3ee);
   padding: 30px 0;
   margin-top: 12px;
 }
@@ -275,6 +310,7 @@ body {
   padding: 16px;
   border-radius: var(--radius);
   box-shadow: var(--card-shadow);
+  border-left: 3px solid rgba(47, 128, 111, 0.3);
 }
 .testimonial p {
   margin: 0;
@@ -362,6 +398,13 @@ body {
   background: #fff;
   width: 100%;
 }
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(47, 128, 111, 0.16);
+  outline: none;
+}
 .contact-form textarea {
   min-height: 116px;
   resize: vertical;
@@ -418,6 +461,7 @@ body {
 
 /* footer */
 .site-footer {
+  margin-top: auto;
   padding: 18px 0;
   background: var(--panel);
   border-top: 1px solid var(--border);
