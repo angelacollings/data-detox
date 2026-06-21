@@ -7,10 +7,8 @@ export default function Header() {
         <div className="brand">
           <h1>
             <a className="brand-logo" href="/" aria-label="Data Detox">
-              <img src="/assets/datadetox-icon-green.png" alt="" />
-              <span className="brand-wordmark" aria-hidden="true">
-                <span>Data</span>
-                <em>Detox</em>
+              <span className="brand-logo-crop" aria-hidden="true">
+                <img src="/assets/data-detox-logo-wide.png" alt="" />
               </span>
             </a>
           </h1>

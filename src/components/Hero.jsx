@@ -17,9 +17,6 @@ export default function Hero() {
         </div>
         <div className="hero-card" aria-hidden>
           <div className="hero-card-header">
-            <div className="card-avatar">
-              <img src="/assets/datadetox-icon-green.png" alt="" />
-            </div>
             <div>
               <strong>Data Detox</strong>
               <div className="muted">Real estate database support</div>
