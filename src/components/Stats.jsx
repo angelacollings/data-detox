@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Stats() {
   const stats = [
-    { label: 'Contacts cleaned', value: '1,200+' },
-    { label: 'Confirmed numbers', value: '78%' },
-    { label: 'Appraisal leads generated', value: '320+' },
+    { label: 'Contacts cleaned', value: '7,500+' },
+    { label: 'Lead Scores Updated', value: '4,000+' },
+    { label: 'Hours given back to salespeople', value: '1250+' },
   ];
 
   return (

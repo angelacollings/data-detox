@@ -5,38 +5,37 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero-inner">
         <div className="hero-text">
-          <h2>Turn your real estate database into appraisal opportunities.</h2>
+          <h2>From Data to Leads: We bridge the gap for you. </h2>
           <p>
-            We call through your CRM, clean and update contact records,
-            find appraisal conversations, and support agents with desktop
-            appraisals.
+            You&apos;ve done the hard work building your database. We&apos;ll
+            help you bring it back to life, so you can focus on what you do
+            best: building relationships and making deals.
           </p>
           <a className="btn" href="#contact">
             Talk to us
           </a>
         </div>
-        <div className="hero-card" aria-hidden>
+        {/* <div className="hero-card" aria-hidden>
           <div className="hero-card-header">
             <div>
-              <strong>Data Detox</strong>
-              <div className="muted">Real estate database support</div>
+              <strong>Do you need help with?</strong>
+              <div className="muted"></div>
             </div>
           </div>
           <div className="hero-card-list">
             <div>
-              <span>01</span>
-              Clean CRM records
+              <span>*</span>
+              Prioritising high value contacts?
             </div>
             <div>
-              <span>02</span>
-              Call and update contacts
+              <span>*</span>
+              Re-engaging dormant contacts?
             </div>
             <div>
-              <span>03</span>
-              Surface appraisal opportunities
+              <span>*</span>A plan to go forward?
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
