@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const QUOTE_PREVIEW_LENGTH = 170;
 
 const data = [
   {
@@ -11,20 +13,95 @@ const data = [
       'Working with Donna has been an absolute lifesaver! She is so efficient, incredibly easy to talk to, and just amazing at what she does. She completely cleared out the fluff from our database, making lead management a breeze and giving us total peace of mind that our data is actually working for us.',
     by: 'Ashlee, Whangarei',
   },
+  {
+    quote:
+      'I cant recommend Donna and Data Detox highly enough! She transformed my real estate database by matching contacts to properties, updating missing information, and cleaning everything up with incredible attention to detail. What would have taken me countless hours was completed quickly and professionally, leaving me with an accurate, organised, and genuinely useful database. If youre time-poor and want your data in top shape, Donna is absolutely worth it. Thank you for making such a daunting task so easy!',
+    by: 'Sally, Whangarei',
+  },
+  {
+    quote:
+      'Detox Data completely transformed our messy database into a streamlined, highly accurate asset, drastically improving our daily efficiency and marketing reach. Their meticulous attention to detail and professional service make them an invaluable partner for any business looking to clean up and optimize their customer records.',
+    by: 'Julie, Whangarei',
+  },
 ];
 
+function selectRandomTestimonials(items, count) {
+  const shuffled = [...items];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [
+      shuffled[randomIndex],
+      shuffled[index],
+    ];
+  }
+
+  return shuffled.slice(0, count);
+}
+
+function quotePreview(quote) {
+  if (quote.length <= QUOTE_PREVIEW_LENGTH) {
+    return quote;
+  }
+
+  const shortened = quote.slice(0, QUOTE_PREVIEW_LENGTH);
+  const lastSpace = shortened.lastIndexOf(' ');
+
+  return shortened.slice(0, lastSpace > 0 ? lastSpace : shortened.length);
+}
+
 export default function Testimonials() {
+  const [visibleTestimonials] = useState(() =>
+    selectRandomTestimonials(data, 3)
+  );
+  const [expandedQuotes, setExpandedQuotes] = useState(() => new Set());
+
+  const toggleQuote = (author) => {
+    setExpandedQuotes((current) => {
+      const next = new Set(current);
+
+      if (next.has(author)) {
+        next.delete(author);
+      } else {
+        next.add(author);
+      }
+
+      return next;
+    });
+  };
+
   return (
     <section id="testimonials" className="section">
       <div className="container">
         <h3 className="section-title">What our clients say</h3>
         <div className="testimonials">
-          {data.map((t, i) => (
-            <blockquote key={i} className="testimonial">
-              <p>&ldquo;{t.quote}&rdquo;</p>
-              <cite>- {t.by}</cite>
-            </blockquote>
-          ))}
+          {visibleTestimonials.map((testimonial) => {
+            const isExpanded = expandedQuotes.has(testimonial.by);
+            const isTruncated = testimonial.quote.length > QUOTE_PREVIEW_LENGTH;
+            const displayedQuote = isExpanded
+              ? testimonial.quote
+              : quotePreview(testimonial.quote);
+
+            return (
+              <blockquote key={testimonial.by} className="testimonial">
+                <p>
+                  &ldquo;{displayedQuote}
+                  {!isExpanded && isTruncated ? '…' : ''}&rdquo;{' '}
+                  {isTruncated && (
+                    <button
+                      type="button"
+                      className="testimonial-toggle"
+                      aria-expanded={isExpanded}
+                      onClick={() => toggleQuote(testimonial.by)}
+                    >
+                      {isExpanded ? 'less' : 'more…'}
+                    </button>
+                  )}
+                </p>
+                <cite>- {testimonial.by}</cite>
+              </blockquote>
+            );
+          })}
         </div>
       </div>
     </section>

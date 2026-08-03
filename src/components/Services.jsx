@@ -4,14 +4,17 @@ const items = [
   {
     title: 'Database Cleaning',
     desc: 'By cleaning your database, we uncover hidden potential, delivering qualified appraisal opportunities you can act on immediately',
+    href: '/database-cleaning',
   },
   {
     title: 'Database Calling',
     desc: 'Call through your database with a professional real estate approach to update details and uncover appraisal opportunities.',
+    href: '/database-calling',
   },
   {
     title: 'Desktop Appraisals',
     desc: 'Prepare desktop appraisal support for agents who need fast, practical property insights before the next conversation.',
+    href: '/desktop-appraisals',
   },
   {
     title: 'Updating Property Attributes',
@@ -43,6 +46,11 @@ export default function Services() {
             <article key={s.title} className="service">
               <h4>{s.title}</h4>
               <p>{s.desc}</p>
+              {s.href && (
+                <a className="service-link" href={s.href}>
+                  Learn more
+                </a>
+              )}
             </article>
           ))}
         </div>

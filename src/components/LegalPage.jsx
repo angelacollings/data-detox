@@ -62,14 +62,14 @@ export default function LegalPage({ page }) {
   }
 
   return (
-    <main className="legal-page">
+    <main id="main-content" className="legal-page" tabIndex="-1">
       <section className="section">
         <div className="container legal-page-inner">
           <a className="back-link" href="/">
             Back to home
           </a>
           <div className="section-header">
-            <h2>{content.title}</h2>
+            <h1>{content.title}</h1>
             <p>{content.intro}</p>
           </div>
           <div className="legal-page-content">

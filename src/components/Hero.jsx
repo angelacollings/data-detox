@@ -5,37 +5,37 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero-inner">
         <div className="hero-text">
-          <h2>From Data to Leads: We bridge the gap for you. </h2>
-          <p>
-            You&apos;ve done the hard work building your database. We&apos;ll
-            help you bring it back to life, so you can focus on what you do
-            best: building relationships and making deals.
+          <h1>From Data to Leads: We bridge the gap for you.</h1>
+          <p className="hero-supporting-statement">
+            Turn a messy database into your most valuable business asset.
           </p>
+
           <a className="btn" href="#contact">
             Talk to us
           </a>
         </div>
-        {/* <div className="hero-card" aria-hidden>
+        <aside className="hero-card" aria-label="What you'll get">
           <div className="hero-card-header">
             <div>
-              <strong>Do you need help with?</strong>
-              <div className="muted"></div>
+              <strong>What you&apos;ll get</strong>
+              <div className="muted">A database that works harder for you.</div>
             </div>
           </div>
           <div className="hero-card-list">
             <div>
-              <span>*</span>
-              Prioritising high value contacts?
+              <span aria-hidden="true"> </span>
+              Accurate, organised records
             </div>
             <div>
-              <span>*</span>
-              Re-engaging dormant contacts?
+              <span aria-hidden="true"> </span>
+              Clearer prospecting priorities
             </div>
             <div>
-              <span>*</span>A plan to go forward?
+              <span aria-hidden="true"> </span>
+              More time to focus on clients
             </div>
           </div>
-        </div> */}
+        </aside>
       </div>
     </section>
   );
