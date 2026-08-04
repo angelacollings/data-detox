@@ -169,7 +169,7 @@ describe('App', () => {
     ).toBe('/#services');
     expect(
       screen.getByRole('link', { name: /About/i }).getAttribute('href')
-    ).toBe('/about');
+    ).toBe('/about/');
     expect(
       screen.getByRole('link', { name: /Book a call/i }).getAttribute('href')
     ).toBe('/#contact');

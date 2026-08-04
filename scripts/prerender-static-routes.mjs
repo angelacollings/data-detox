@@ -38,7 +38,7 @@ const routes = {
 };
 
 for (const [route, meta] of Object.entries(routes)) {
-  const canonicalUrl = `${siteUrl}/${route}`;
+  const canonicalUrl = `${siteUrl}/${route}/`;
   const routeDirectory = new URL(`${route}/`, distDirectory);
   const routeHtml = sourceHtml
     .replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`)

@@ -4,17 +4,17 @@ const items = [
   {
     title: 'Database Revitalisation',
     desc: 'Refresh and strengthen your database by correcting inaccurate information, resolving duplication and organising records so you can find what you need quickly.',
-    href: '/database-revitalisation',
+    href: '/database-revitalisation/',
   },
   {
     title: 'Client Verification',
     desc: 'Reconnect with past clients, verify contact details and identify conversations or opportunities that need your follow-up.',
-    href: '/client-verification',
+    href: '/client-verification/',
   },
   {
     title: 'Appraisal Support',
     desc: 'Complete appraisal update calls and prepare desktop appraisals, giving you more time to focus on listing, selling and client relationships.',
-    href: '/appraisal-support',
+    href: '/appraisal-support/',
   },
   {
     title: 'Ongoing Database Health',

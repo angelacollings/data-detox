@@ -7,15 +7,15 @@ services and business information.
 ## Main pages
 
 - [Home](https://datadetox.co.nz/): Overview of Data Detox and its services.
-- [About](https://datadetox.co.nz/about): Background and experience.
-- [Database Revitalisation](https://datadetox.co.nz/database-revitalisation): Real estate database refreshing, enrichment and organisation.
-- [Client Verification](https://datadetox.co.nz/client-verification): Database calling and contact verification.
-- [Appraisal Support](https://datadetox.co.nz/appraisal-support): Desktop appraisal support for real estate salespeople.
+- [About](https://datadetox.co.nz/about/): Background and experience.
+- [Database Revitalisation](https://datadetox.co.nz/database-revitalisation/): Real estate database refreshing, enrichment and organisation.
+- [Client Verification](https://datadetox.co.nz/client-verification/): Database calling and contact verification.
+- [Appraisal Support](https://datadetox.co.nz/appraisal-support/): Desktop appraisal support for real estate salespeople.
 
 ## Policies
 
-- [Privacy policy](https://datadetox.co.nz/privacy)
-- [Website terms](https://datadetox.co.nz/terms)
+- [Privacy policy](https://datadetox.co.nz/privacy/)
+- [Website terms](https://datadetox.co.nz/terms/)
 
 ## Contact
 

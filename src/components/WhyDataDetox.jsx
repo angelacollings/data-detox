@@ -26,7 +26,7 @@ export default function WhyDataDetox() {
             <span className="why-monogram" aria-hidden="true">D</span>
             <span><strong>Donna</strong><small>Founder, Data Detox</small></span>
           </div>
-          <a className="text-link" href="/about">Meet Donna <span aria-hidden="true">→</span></a>
+          <a className="text-link" href="/about/">Meet Donna <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>

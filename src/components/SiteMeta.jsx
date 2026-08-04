@@ -15,37 +15,37 @@ const pages = {
     title: 'About Data Detox | Real Estate Database Specialist',
     description:
       'Learn about Donna’s hands-on experience helping real estate salespeople maintain accurate, prospecting-ready databases.',
-    path: '/about',
+    path: '/about/',
   },
   privacy: {
     title: 'Privacy Policy | Data Detox',
     description:
       'How Data Detox handles enquiry details, client database information and privacy requests.',
-    path: '/privacy',
+    path: '/privacy/',
   },
   terms: {
     title: 'Website Terms | Data Detox',
     description:
       'The terms for using the Data Detox website and enquiring about our real estate database services.',
-    path: '/terms',
+    path: '/terms/',
   },
   'database-revitalisation': {
     title: 'Real Estate Database Revitalisation NZ | Data Detox',
     description:
       'We clean and organise real estate databases so salespeople can work with accurate records and uncover qualified appraisal opportunities.',
-    path: '/database-revitalisation',
+    path: '/database-revitalisation/',
   },
   'client-verification': {
     title: 'Client Verification for Real Estate NZ | Data Detox',
     description:
       'Professional client verification for New Zealand real estate salespeople, focused on updating contact details and uncovering opportunities.',
-    path: '/client-verification',
+    path: '/client-verification/',
   },
   'appraisal-support': {
     title: 'Desktop Appraisal Support NZ | Data Detox',
     description:
       'Practical desktop appraisal support for real estate salespeople who need useful property insights before their next client conversation.',
-    path: '/appraisal-support',
+    path: '/appraisal-support/',
   },
 };
 

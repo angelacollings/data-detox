@@ -74,7 +74,7 @@ The required outcomes are:
 - HTTPS `www` redirects to `https://datadetox.co.nz`
 - The security headers in the supplied file appear on HTML responses
 - `/assets/` receives a one-year browser cache lifetime
-- Generated routes work without a trailing slash
+- Generated routes use a consistent trailing slash
 - Unknown URLs return a genuine `404` response
 - `/contact.php` continues to execute through the existing PHP configuration
 
@@ -97,7 +97,7 @@ curl -I http://datadetox.co.nz/
 curl -I https://www.datadetox.co.nz/
 curl -I https://datadetox.co.nz/
 curl -I https://datadetox.co.nz/assets/index-HASH.js
-curl -I https://datadetox.co.nz/about/
+curl -I https://datadetox.co.nz/about
 curl -I https://datadetox.co.nz/database-cleaning
 curl -I https://datadetox.co.nz/this-page-does-not-exist
 ```
@@ -108,8 +108,8 @@ show `Cache-Control: public, max-age=31536000, immutable`. Replace
 `index-HASH.js` with the name of an actual JavaScript file from the deployed
 `assets/` directory; the hash and therefore the filename can change on every
 build. A nonexistent `/assets/` URL should return `404`, not the HTML homepage.
-`/about/` should redirect to `/about`, `/database-cleaning` should permanently
-redirect to `/database-revitalisation`, and an unknown page should return `404`.
+`/about` should redirect to `/about/`, `/database-cleaning` should permanently
+redirect to `/database-revitalisation/`, and an unknown page should return `404`.
 
 ## 4. Optional SiteHost proxy caching
 

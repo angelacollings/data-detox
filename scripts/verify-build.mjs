@@ -31,7 +31,7 @@ for (const route of routes) {
     new URL(route ? `${route}/index.html` : 'index.html', dist),
     'utf8'
   );
-  const canonical = route ? `${siteUrl}/${route}` : `${siteUrl}/`;
+  const canonical = route ? `${siteUrl}/${route}/` : `${siteUrl}/`;
 
   if (!html.includes(`<link rel="canonical" href="${canonical}"`)) {
     throw new Error(`Incorrect canonical URL for ${route || 'home'}`);
@@ -63,7 +63,7 @@ if (!htaccess.includes(`'sha256-${jsonLdHash}'`)) {
 
 const sitemap = await readFile(new URL('sitemap.xml', dist), 'utf8');
 for (const route of routes.filter(Boolean)) {
-  if (!sitemap.includes(`<loc>${siteUrl}/${route}</loc>`)) {
+  if (!sitemap.includes(`<loc>${siteUrl}/${route}/</loc>`)) {
     throw new Error(`Sitemap is missing ${route}`);
   }
 }
