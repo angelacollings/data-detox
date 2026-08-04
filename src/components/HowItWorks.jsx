@@ -2,38 +2,35 @@ import React from 'react';
 
 const steps = [
   {
-    title: 'We discuss your database.',
-    description:
-      "We'll talk about your current system and what you'd like to achieve.",
+    title: 'Discover',
+    description: 'We discuss your business, your database and what better data needs to make possible for you.',
   },
   {
-    title: 'You provide secure access.',
-    description:
-      'Access is provided securely, and your information is treated with care and confidentiality.',
+    title: 'Assess',
+    description: 'I review the current state of your records and identify the areas that will create the most useful improvement.',
   },
   {
-    title: 'We clean, organise and standardise your data.',
-    description:
-      "We'll remove inconsistencies, organise records and make your database easier to use.",
+    title: 'Revitalise',
+    description: 'I verify client information, organise records, complete agreed appraisal work and improve the overall quality of your database.',
   },
   {
-    title: "We return a database that's ready for prospecting.",
-    description:
-      "You'll receive a database that's organised, easy to search and ready to support your prospecting.",
+    title: 'Handover',
+    description: 'You receive a clearer, more reliable database that is ready for confident, consistent prospecting.',
   },
 ];
 
 export default function HowItWorks() {
   return (
     <section
+      id="how-it-works"
       className="section how-it-works"
       aria-labelledby="how-it-works-title"
     >
       <div className="container">
         <div className="section-header">
-          <h3 id="how-it-works-title" className="section-title">
-            How it works
-          </h3>
+          <div className="eyebrow">A clear, careful process</div>
+          <h2 id="how-it-works-title" className="section-title">From uncertain data to confident prospecting.</h2>
+          <p>You know where the project is heading, what is being improved and what you will receive.</p>
         </div>
         <ol className="steps-grid">
           {steps.map((step, index) => (

@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prerender-static-routes.mjs",
+    "verify:build": "node scripts/verify-build.mjs",
+    "deploy:check": "npm run lint && npm test -- --run && npm run build && npm run verify:build",
     "preview": "vite preview",
     "lint": "eslint . --ext .js,.jsx",
     "format": "prettier --write .",

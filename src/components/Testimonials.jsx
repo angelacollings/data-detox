@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 
-const QUOTE_PREVIEW_LENGTH = 170;
+const QUOTE_PREVIEW_LENGTH = 230;
 
 const data = [
+  {
+    quote:
+      'Working with Data Detox has made managing my database so much easier. The attention to detail, accurate data cleaning, and organised approach have given me confidence that my contact information is up to date, making prospecting faster and more effective.',
+    by: 'Jo, Whangarei',
+  },
   {
     quote:
       'Data detox is amazing. They clean up your contacts in quick time. Update the details your missing and leave you with useful data. Highly efficient and would recommend to anyone who has limited time!',
@@ -51,9 +56,7 @@ function quotePreview(quote) {
 }
 
 export default function Testimonials() {
-  const [visibleTestimonials] = useState(() =>
-    selectRandomTestimonials(data, 3)
-  );
+  const [visibleTestimonials] = useState(() => selectRandomTestimonials(data, 3));
   const [expandedQuotes, setExpandedQuotes] = useState(() => new Set());
 
   const toggleQuote = (author) => {
@@ -73,7 +76,10 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="section">
       <div className="container">
-        <h3 className="section-title">What our clients say</h3>
+        <div className="section-header">
+          <div className="eyebrow">Client experience</div>
+          <h2 className="section-title">What changes when your data works for you.</h2>
+        </div>
         <div className="testimonials">
           {visibleTestimonials.map((testimonial) => {
             const isExpanded = expandedQuotes.has(testimonial.by);
@@ -84,6 +90,7 @@ export default function Testimonials() {
 
             return (
               <blockquote key={testimonial.by} className="testimonial">
+                <div className="quote-mark" aria-hidden="true">“</div>
                 <p>
                   &ldquo;{displayedQuote}
                   {!isExpanded && isTruncated ? '…' : ''}&rdquo;{' '}
@@ -98,7 +105,7 @@ export default function Testimonials() {
                     </button>
                   )}
                 </p>
-                <cite>- {testimonial.by}</cite>
+                <cite>{testimonial.by}</cite>
               </blockquote>
             );
           })}

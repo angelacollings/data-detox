@@ -3,8 +3,8 @@ import React from 'react';
 export default function Stats() {
   const stats = [
     { label: 'Contacts cleaned', value: '7,500+' },
-    { label: 'Lead Scores Updated', value: '4,000+' },
-    { label: 'Hours given back to salespeople', value: '1250+' },
+    { label: 'Lead scores updated', value: '4,000+' },
+    { label: 'Hands-on database experience', value: '1,500+ hrs' },
   ];
 
   return (

@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 const siteUrl = 'https://datadetox.co.nz';
 
 const defaultMeta = {
-  title: 'Real Estate Database Cleaning NZ | Data Detox',
+  title: 'Real Estate Database Support NZ | Data Detox',
   description:
-    'Data Detox cleans, organises and enriches real estate databases, helping New Zealand agents uncover opportunities and prospect with confidence.',
+    'Data Detox helps New Zealand real estate salespeople organise and update their databases for more confident prospecting.',
   path: '/',
 };
 
 const pages = {
   about: {
-    title: 'About Data Detox | Real Estate Database Specialists',
+    title: 'About Data Detox | Real Estate Database Specialist',
     description:
-      'Learn about the Data Detox vision and Donna’s hands-on experience helping real estate professionals maintain accurate, prospecting-ready CRM data.',
+      'Learn about Donna’s hands-on experience helping real estate salespeople maintain accurate, prospecting-ready databases.',
     path: '/about',
   },
   privacy: {
@@ -29,23 +29,23 @@ const pages = {
       'The terms for using the Data Detox website and enquiring about our real estate database services.',
     path: '/terms',
   },
-  'database-cleaning': {
-    title: 'Real Estate Database Cleaning NZ | Data Detox',
+  'database-revitalisation': {
+    title: 'Real Estate Database Revitalisation NZ | Data Detox',
     description:
-      'We clean and organise real estate databases so agents can work with accurate records and uncover qualified appraisal opportunities.',
-    path: '/database-cleaning',
+      'We clean and organise real estate databases so salespeople can work with accurate records and uncover qualified appraisal opportunities.',
+    path: '/database-revitalisation',
   },
-  'database-calling': {
-    title: 'Real Estate Database Calling NZ | Data Detox',
+  'client-verification': {
+    title: 'Client Verification for Real Estate NZ | Data Detox',
     description:
-      'Professional database calling for New Zealand real estate teams, focused on updating contact details and uncovering opportunities.',
-    path: '/database-calling',
+      'Professional client verification for New Zealand real estate salespeople, focused on updating contact details and uncovering opportunities.',
+    path: '/client-verification',
   },
-  'desktop-appraisals': {
+  'appraisal-support': {
     title: 'Desktop Appraisal Support NZ | Data Detox',
     description:
-      'Practical desktop appraisal support for real estate agents who need useful property insights before their next client conversation.',
-    path: '/desktop-appraisals',
+      'Practical desktop appraisal support for real estate salespeople who need useful property insights before their next client conversation.',
+    path: '/appraisal-support',
   },
 };
 

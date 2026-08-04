@@ -12,15 +12,15 @@ export default function About() {
           <div className="section-header about-page-header">
             <h1>About Data Detox</h1>
             <p>
-              Data Detox exists to make database work feel simpler, clearer and
-              more valuable for real estate professionals.
+              Practical database support, built on first-hand
+              experience of how individual real estate salespeople actually work.
             </p>
           </div>
 
           <div className="about-vision">
             <div>
               <div className="about-section-label">Our vision</div>
-              <h3>Better data should make better business possible.</h3>
+              <h2>Better data should make better business possible.</h2>
             </div>
             <div className="about-vision-copy">
               <p>
@@ -29,10 +29,9 @@ export default function About() {
                 at the bottom of the list.
               </p>
               <p>
-                Our vision is to help agencies and salespeople work with
-                accurate, organised information so they can prospect with
-                confidence, strengthen relationships and spend more time serving
-                their clients.
+                Our vision is to help salespeople work with accurate, organised
+                information so they can prospect with confidence, strengthen
+                relationships and spend more time serving their clients.
               </p>
             </div>
           </div>
@@ -50,19 +49,19 @@ export default function About() {
               <div className="about-section-label">Behind Data Detox</div>
               <h3 id="donna-title">Meet Donna</h3>
               <p>
-                Donna founded Data Detox after seeing how much opportunity can
-                sit unnoticed inside a busy or inconsistent real estate
-                database.
+                Donna founded Data Detox after seeing how much opportunity can sit
+                unnoticed inside a busy, inconsistent or underworked database.
               </p>
               <p>
-                Donna brings more than 1,500 hours of hands-on experience
-                working inside Ray White CRM systems, helping agents keep their
-                databases accurate, organised and ready for prospecting.
+                Her background spans real estate sales, personal assistant work
+                and more than 1,500 hours working hands-on in real estate databases. She
+                understands the pressure salespeople work under and
+                the information you need at the moment of follow-up.
               </p>
               <p>
-                Her practical understanding of real estate workflows shapes the
-                way we work: carefully, confidentially and with a focus on
-                making every database genuinely useful.
+                That experience shapes every database project: careful,
+                confidential and focused on making your database genuinely useful to
+                you.
               </p>
             </div>
           </section>

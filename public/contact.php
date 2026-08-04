@@ -29,48 +29,7 @@ function send_response(int $status, string $title, string $message): never
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{$safeTitle} | Data Detox</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: #f6f7fb;
-        color: #0f172a;
-        line-height: 1.5;
-      }
-      main {
-        max-width: 640px;
-        margin: 0 auto;
-        padding: 80px 20px;
-      }
-      section {
-        background: #fff;
-        border: 1px solid #e6e9ef;
-        border-radius: 8px;
-        padding: 28px;
-        box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
-      }
-      h1 {
-        margin: 0 0 12px;
-        font-size: 28px;
-        line-height: 1.15;
-      }
-      p {
-        margin: 0 0 20px;
-        color: #6b7280;
-      }
-      a {
-        display: inline-flex;
-        min-height: 46px;
-        align-items: center;
-        justify-content: center;
-        background: #0f172a;
-        color: #fff;
-        border-radius: 8px;
-        padding: 12px 18px;
-        font-weight: 700;
-        text-decoration: none;
-      }
-    </style>
+    <link rel="stylesheet" href="/contact-response.css">
   </head>
   <body>
     <main>
@@ -325,10 +284,11 @@ $message = post_value('message', 3000);
 $service = post_value('service', 80);
 
 $serviceLabels = [
-    'database-cleaning' => 'Database cleaning',
-    'appraisal-calling' => 'Appraisal calling',
-    'desktop-appraisals' => 'Desktop appraisals',
-    'multiple' => 'A mix of services',
+    'database-revitalisation' => 'Database revitalisation',
+    'client-verification' => 'Client verification',
+    'appraisal-support' => 'Appraisal support',
+    'database-health' => 'Ongoing database health',
+    'unsure' => 'Not sure yet',
 ];
 
 $errors = [];

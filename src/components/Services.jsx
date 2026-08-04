@@ -2,31 +2,31 @@ import React from 'react';
 
 const items = [
   {
-    title: 'Database Cleaning',
-    desc: 'By cleaning your database, we uncover hidden potential, delivering qualified appraisal opportunities you can act on immediately',
-    href: '/database-cleaning',
+    title: 'Database Revitalisation',
+    desc: 'Refresh and strengthen your database by correcting inaccurate information, resolving duplication and organising records so you can find what you need quickly.',
+    href: '/database-revitalisation',
   },
   {
-    title: 'Database Calling',
-    desc: 'Call through your database with a professional real estate approach to update details and uncover appraisal opportunities.',
-    href: '/database-calling',
+    title: 'Client Verification',
+    desc: 'Reconnect with past clients, verify contact details and identify conversations or opportunities that need your follow-up.',
+    href: '/client-verification',
   },
   {
-    title: 'Desktop Appraisals',
-    desc: 'Prepare desktop appraisal support for agents who need fast, practical property insights before the next conversation.',
-    href: '/desktop-appraisals',
+    title: 'Appraisal Support',
+    desc: 'Complete appraisal update calls and prepare desktop appraisals, giving you more time to focus on listing, selling and client relationships.',
+    href: '/appraisal-support',
   },
   {
-    title: 'Updating Property Attributes',
-    desc: 'Up to date property attributes makes every comparison faster and more accurate, giving salepeople the confidence to advise clients without wasting time searching for missing information.',
+    title: 'Ongoing Database Health',
+    desc: 'Keep your database organised, searchable and ready to support consistent prospecting—long after the initial revitalisation project is complete.',
   },
   {
-    title: 'Complete Data',
-    desc: 'Identify contacts with missing or incomplete data, and fill in the gaps to make sure you have the information you needed',
+    title: 'Overall Database Check-in',
+    desc: 'We review your database to find the gaps, highlight incomplete information and identify where updates could make it more useful.',
   },
   {
-    title: 'Lead Score Updates',
-    desc: 'Keep your lead scores up to date with the latest information, ensuring you prioritize the most promising opportunities.',
+    title: 'Need a New Farm Area?',
+    desc: 'We can assess your chosen area and help identify relevant contacts you may not already have in your database, giving you a stronger place to start prospecting.',
   },
 ];
 
@@ -35,20 +35,21 @@ export default function Services() {
     <section id="services" className="section">
       <div className="container">
         <div className="section-header">
-          <h3 className="section-title">Services</h3>
+          <div className="eyebrow">Where we help</div>
+          <h2 className="section-title">Make your database useful again.</h2>
           <p>
-            Practical support for salespeople who have useful contacts buried
-            inside messy, outdated, or underworked databases.
+            This is more than a data tidy-up. It is practical database support that
+            helps you work with better information and clearer priorities.
           </p>
         </div>
         <div className="services-grid">
           {items.map((s) => (
             <article key={s.title} className="service">
-              <h4>{s.title}</h4>
+              <h3>{s.title}</h3>
               <p>{s.desc}</p>
               {s.href && (
                 <a className="service-link" href={s.href}>
-                  Learn more
+                  Explore {s.title} <span aria-hidden="true">→</span>
                 </a>
               )}
             </article>

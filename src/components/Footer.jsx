@@ -7,7 +7,7 @@ export default function Footer() {
         <div>
           <div>© {new Date().getFullYear()} Data Detox</div>
           <div className="muted">
-            Serving real estate agents with database and appraisal support
+            Database support for real estate salespeople
           </div>
         </div>
         <nav className="footer-links" aria-label="Legal links">

@@ -4,9 +4,46 @@ Options -Indexes
   RewriteEngine On
   RewriteBase /
 
+  # SiteHost terminates TLS at its proxy and passes the original scheme here.
+  RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]
+  RewriteRule ^ https://datadetox.co.nz%{REQUEST_URI} [R=301,L,NE]
+
+  # Use one canonical hostname for both pages and static files.
+  RewriteCond %{HTTP_HOST} !^datadetox\.co\.nz$ [NC]
+  RewriteRule ^ https://datadetox.co.nz%{REQUEST_URI} [R=301,L,NE]
+
+  # Preserve existing links while moving service pages to outcome-led URLs.
+  RewriteRule ^database-cleaning/?$ /database-revitalisation [R=301,L,NE]
+  RewriteRule ^database-calling/?$ /client-verification [R=301,L,NE]
+  RewriteRule ^desktop-appraisals/?$ /appraisal-support [R=301,L,NE]
+
+  # Keep canonical page URLs free of trailing slashes.
+  RewriteCond %{REQUEST_URI} ^/(about|privacy|terms|database-revitalisation|client-verification|appraisal-support)/+$ [NC]
+  RewriteRule ^(.+)/$ /$1 [R=301,L,NE]
+
+  # Serve the generated HTML for every public application route.
+  RewriteRule ^(about|privacy|terms|database-revitalisation|client-verification|appraisal-support)$ $1/index.html [L]
+
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  RewriteRule ^ index.html [L]
+  # Missing static assets must return 404 rather than the React application.
+  RewriteRule ^assets/ - [R=404,L]
+
+  # Return a genuine 404 for unknown URLs instead of a homepage soft 404.
+  RewriteRule ^ - [R=404,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set X-Frame-Options "DENY"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'sha256-3serbpoJQ2xX+jtJX9CnkCeOkhCU1Uzxre/FjY/EU1k='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests"
+
+  <If "%{REQUEST_URI} =~ m#^/assets/#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
 </IfModule>

@@ -47,15 +47,17 @@ export default function ContactForm() {
     <section id="contact" className="section contact-section">
       <div className="container contact-grid">
         <div className="contact-copy">
-          <h3 className="section-title">Contact Data Detox</h3>
+          <div className="eyebrow">Start a conversation</div>
+          <h2 className="section-title">Let&apos;s see if we&apos;re a good fit.</h2>
           <p>
-            Tell us what is sitting in your database and what you would like
-            cleaned, called, or appraised. We will follow up with the next step.
+            Every salesperson&apos;s database is different. Book a 15-minute phone
+            or Zoom call and we&apos;ll discuss your database, your goals and whether
+            Data Detox is the right solution for you.
           </p>
           <ul className="contact-points">
-            <li>Old databases that need cleaning before prospecting</li>
-            <li>Contacts that need a professional appraisal call</li>
-            <li>Desktop appraisal support for active agent workflows</li>
+            <li>No obligation and no hard sell</li>
+            <li>A practical conversation about your current database</li>
+            <li>A clear next step if Data Detox can help</li>
           </ul>
           <p className="contact-direct">
             Prefer email?{' '}
@@ -146,12 +148,13 @@ export default function ContactForm() {
             What do you need help with?
             <select name="service" defaultValue="">
               <option value="" disabled>
-                Select a service
+                Select an area
               </option>
-              <option value="database-cleaning">Database cleaning</option>
-              <option value="appraisal-calling">Appraisal calling</option>
-              <option value="desktop-appraisals">Desktop appraisals</option>
-              <option value="multiple">A mix of services</option>
+              <option value="database-revitalisation">Database revitalisation</option>
+              <option value="client-verification">Client verification</option>
+              <option value="appraisal-support">Appraisal support</option>
+              <option value="database-health">Ongoing database health</option>
+              <option value="unsure">Not sure yet</option>
             </select>
           </label>
           <label>
@@ -173,7 +176,7 @@ export default function ContactForm() {
             )}
           </label>
           <button className="btn contact-submit" type="submit">
-            Send message
+            Request a discovery call
           </button>
         </form>
       </div>

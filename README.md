@@ -1,13 +1,13 @@
 # Data Detox
 
-A small React/Vite website for Data Detox, a service for real estate agents who need cleaner CRM data, appraisal calling, and desktop appraisal support.
+A small React/Vite website for Data Detox, a service for real estate salespeople who need cleaner database information, appraisal calling, and desktop appraisal support.
 
-The current site is intentionally simple: explain the services, build trust, and send interested agents to the contact form.
+The current site is intentionally simple: explain the services, build trust, and send interested salespeople to the contact form.
 
 ## Current Scope
 
 - Present the core services clearly.
-- Keep placeholder stats and testimonials visible until real data is available.
+- Present supplied business statistics and verified client testimonials.
 - Collect enquiry details through the contact form.
 - Build as a static frontend that can be hosted outside Netlify.
 
@@ -57,6 +57,8 @@ On SiteHost Cloud Containers, the handler first tries the internal SMTP relay at
 
 The handler sends mail as `hello@datadetox.co.nz`; make sure SPF/DKIM/DMARC are configured so messages are not treated as spam. After deployment, send one real test enquiry from the production site and confirm it arrives.
 
-## Content To Replace
+## Content Maintenance
 
-The stats and testimonials are placeholders for now. Before launch, replace them with real numbers, verified testimonials, or remove those sections until the final data is available.
+The homepage uses supplied business statistics and client testimonials. Keep
+those figures and quotes accurate, and only publish testimonials with the
+client's permission. Replace the About-page portrait placeholder before launch.

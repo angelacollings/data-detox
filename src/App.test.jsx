@@ -21,7 +21,7 @@ describe('App', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /From Data to Leads/i,
+        name: /Make your database work for you/i,
       })
     ).toBeDefined();
   });
@@ -29,7 +29,30 @@ describe('App', () => {
   it('renders the primary call to action', () => {
     setPath('/');
     render(<App />);
-    expect(screen.getByRole('link', { name: /Talk to us/i })).toBeDefined();
+    expect(
+      screen.getByRole('link', { name: /Book a 15-minute discovery call/i })
+    ).toBeDefined();
+  });
+
+  it('uses sequential homepage headings and descriptive service links', () => {
+    setPath('/');
+    const { container } = render(<App />);
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: /Make your database useful again/i,
+      })
+    ).toBeDefined();
+    expect(container.querySelector('h3.section-title')).toBeNull();
+    expect(
+      screen.getByRole('link', { name: /Explore Database Revitalisation/i })
+    ).toBeDefined();
+    expect(
+      screen.getByRole('link', { name: /Explore Client Verification/i })
+    ).toBeDefined();
+    expect(
+      screen.getByRole('link', { name: /Explore Appraisal Support/i })
+    ).toBeDefined();
   });
 
   it('renders the supporting hero statement', () => {
@@ -37,7 +60,7 @@ describe('App', () => {
     render(<App />);
     expect(
       screen.getByText(
-        /Turn a messy database into your most valuable business asset/i
+        /organises and updates your database/i
       )
     ).toBeDefined();
   });
@@ -45,16 +68,18 @@ describe('App', () => {
   it('renders the hero outcomes card', () => {
     setPath('/');
     render(<App />);
-    expect(screen.getByText(/Accurate, organised records/i)).toBeDefined();
-    expect(screen.getByText(/Clearer prospecting priorities/i)).toBeDefined();
-    expect(screen.getByText(/More time to focus on clients/i)).toBeDefined();
+    expect(screen.getAllByText(/Confident prospecting/i)).toHaveLength(2);
+    expect(screen.getByText(/Clear follow-up opportunities/i)).toBeDefined();
+    expect(
+      screen.getByText(/More productive time for salespeople/i)
+    ).toBeDefined();
   });
 
   it('renders all four how it works steps', () => {
     setPath('/');
     render(<App />);
     expect(
-      screen.getByRole('heading', { name: /How it works/i })
+      screen.getByRole('heading', { name: /From uncertain data/i })
     ).toBeDefined();
     expect(screen.getAllByRole('listitem')).toHaveLength(7);
   });
@@ -64,13 +89,15 @@ describe('App', () => {
     render(<App />);
     expect(
       screen.getByText(
-        /Donna brings more than 1,500 hours of hands-on experience/i
+        /more than 1,500 hours working hands-on/i
       )
     ).toBeDefined();
     expect(
       screen.getByRole('heading', { level: 1, name: /About Data Detox/i })
     ).toBeDefined();
-    expect(screen.queryByRole('link', { name: /Talk to us/i })).toBeNull();
+    expect(
+      screen.queryByRole('link', { name: /Book a 15-minute discovery call/i })
+    ).toBeNull();
   });
 
   it('shows three randomly selected testimonial cards', () => {
@@ -95,7 +122,9 @@ describe('App', () => {
     expect(screen.getByLabelText(/Name/i)).toBeDefined();
     expect(screen.getByLabelText(/Email/i)).toBeDefined();
     expect(screen.getByLabelText(/What do you need help with/i)).toBeDefined();
-    expect(screen.getByRole('button', { name: /Send message/i })).toBeDefined();
+    expect(
+      screen.getByRole('button', { name: /Request a discovery call/i })
+    ).toBeDefined();
   });
 
   it('shows accessible contact form errors', () => {
@@ -109,13 +138,19 @@ describe('App', () => {
   });
 
   it('renders a dedicated service page', () => {
-    setPath('/database-cleaning');
+    setPath('/database-revitalisation');
     render(<App />);
     expect(
-      screen.getByRole('heading', { level: 1, name: /Database Cleaning/i })
+      screen.getByRole('heading', { level: 1, name: /Database Revitalisation/i })
     ).toBeDefined();
     expect(
       screen.getByRole('link', { name: /Back to services/i })
+    ).toBeDefined();
+    expect(
+      screen.getByText(/A real estate database is never finished/i)
+    ).toBeDefined();
+    expect(
+      screen.getByText(/That’s where Data Detox comes in/i)
     ).toBeDefined();
   });
 
@@ -136,7 +171,7 @@ describe('App', () => {
       screen.getByRole('link', { name: /About/i }).getAttribute('href')
     ).toBe('/about');
     expect(
-      screen.getByRole('link', { name: /Contact/i }).getAttribute('href')
+      screen.getByRole('link', { name: /Book a call/i }).getAttribute('href')
     ).toBe('/#contact');
   });
 
@@ -146,7 +181,9 @@ describe('App', () => {
     expect(
       screen.getByRole('heading', { level: 1, name: /Privacy Policy/i })
     ).toBeDefined();
-    expect(screen.queryByRole('link', { name: /Talk to us/i })).toBeNull();
+    expect(
+      screen.queryByRole('link', { name: /Book a 15-minute discovery call/i })
+    ).toBeNull();
   });
 
   it('renders legal pages with trailing slashes', () => {
