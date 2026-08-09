@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
-import { afterEach, describe, it, expect } from 'vitest';
+import { afterEach, describe, it, expect, vi } from 'vitest';
 
 const setPath = (path) => {
   window.history.pushState({}, '', path);
@@ -228,6 +228,20 @@ describe('App', () => {
     expect(
       screen.getByRole('link', { name: /Book a call/i }).getAttribute('href')
     ).toBe('/#contact');
+  });
+
+  it.each([
+    ['contact', 'contact'],
+    ['services', 'services'],
+  ])('scrolls to the %s section after navigating home', (hash, targetId) => {
+    setPath(`/#${hash}`);
+    const scrollIntoView = vi.fn();
+    Element.prototype.scrollIntoView = scrollIntoView;
+
+    render(<App />);
+
+    expect(document.getElementById(targetId)).not.toBeNull();
+    expect(scrollIntoView).toHaveBeenCalledOnce();
   });
 
   it('renders privacy as a separate page', () => {

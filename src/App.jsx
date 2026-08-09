@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -20,6 +20,19 @@ export default function App() {
   const legalPage = getLegalPage(page);
   const isAboutPage = page === 'about';
   const servicePage = getServicePage(page);
+
+  useLayoutEffect(() => {
+    if (page !== 'home' || !window.location.hash) {
+      return;
+    }
+
+    const targetId = decodeURIComponent(window.location.hash.slice(1));
+    const target = document.getElementById(targetId);
+
+    if (target && typeof target.scrollIntoView === 'function') {
+      target.scrollIntoView();
+    }
+  }, [page]);
 
   return (
     <div className="site">
