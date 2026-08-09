@@ -8,7 +8,7 @@ export default function Hero() {
           <div className="eyebrow">Database support for real estate</div>
           <h1>Make your database work for you.</h1>
           <p className="hero-supporting-statement">
-            Data Detox organises and updates your database—so you
+            Data Detox organises and updates your database, so you
             can prospect with confidence, follow up consistently and act on the
             right opportunities.
           </p>
@@ -24,7 +24,7 @@ export default function Hero() {
         <aside className="hero-card" aria-label="The result of a healthier database">
           <div className="hero-card-kicker">The result</div>
           <p className="hero-card-quote">
-            A database you can trust—not another job waiting at the bottom of
+            A database you can trust, not another job waiting at the bottom of
             your list.
           </p>
           <div className="hero-card-list">

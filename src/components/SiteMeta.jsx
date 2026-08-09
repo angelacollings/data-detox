@@ -41,11 +41,11 @@ const pages = {
       'Professional client verification for New Zealand real estate salespeople, focused on updating contact details and uncovering opportunities.',
     path: '/client-verification/',
   },
-  'appraisal-support': {
-    title: 'Desktop Appraisal Support NZ | Data Detox',
+  'appraisal-preparation': {
+    title: 'Appraisal Preparation NZ | Data Detox',
     description:
-      'Practical desktop appraisal support for real estate salespeople who need useful property insights before their next client conversation.',
-    path: '/appraisal-support/',
+      'Professional desktop appraisal preparation in Property Smarts for real estate salespeople who want more time with clients.',
+    path: '/appraisal-preparation/',
   },
 };
 

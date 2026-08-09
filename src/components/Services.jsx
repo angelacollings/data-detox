@@ -12,13 +12,13 @@ const items = [
     href: '/client-verification/',
   },
   {
-    title: 'Appraisal Support',
+    title: 'Appraisal Preparation',
     desc: 'Complete appraisal update calls and prepare desktop appraisals, giving you more time to focus on listing, selling and client relationships.',
-    href: '/appraisal-support/',
+    href: '/appraisal-preparation/',
   },
   {
     title: 'Ongoing Database Health',
-    desc: 'Keep your database organised, searchable and ready to support consistent prospecting—long after the initial revitalisation project is complete.',
+    desc: 'Keep your database organised, searchable and ready to support consistent prospecting long after the initial revitalisation project is complete.',
   },
   {
     title: 'Overall Database Check-in',

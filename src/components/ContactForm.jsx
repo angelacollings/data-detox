@@ -152,7 +152,7 @@ export default function ContactForm() {
               </option>
               <option value="database-revitalisation">Database revitalisation</option>
               <option value="client-verification">Client verification</option>
-              <option value="appraisal-support">Appraisal support</option>
+              <option value="appraisal-preparation">Appraisal preparation</option>
               <option value="database-health">Ongoing database health</option>
               <option value="unsure">Not sure yet</option>
             </select>

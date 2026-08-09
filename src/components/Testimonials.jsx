@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 const QUOTE_PREVIEW_LENGTH = 230;
 
@@ -56,8 +56,37 @@ function quotePreview(quote) {
 }
 
 export default function Testimonials() {
-  const [visibleTestimonials] = useState(() => selectRandomTestimonials(data, 3));
+  const [visibleTestimonials] = useState(() =>
+    selectRandomTestimonials(data, data.length)
+  );
   const [expandedQuotes, setExpandedQuotes] = useState(() => new Set());
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const carouselRef = useRef(null);
+
+  const updateScrollProgress = () => {
+    const carousel = carouselRef.current;
+
+    if (!carousel) {
+      return;
+    }
+
+    const maximumScroll = carousel.scrollWidth - carousel.clientWidth;
+    setScrollProgress(
+      maximumScroll > 0 ? (carousel.scrollLeft / maximumScroll) * 100 : 0
+    );
+  };
+
+  const moveSlider = (event) => {
+    const carousel = carouselRef.current;
+    const progress = Number(event.target.value);
+
+    setScrollProgress(progress);
+
+    if (carousel) {
+      carousel.scrollLeft =
+        ((carousel.scrollWidth - carousel.clientWidth) * progress) / 100;
+    }
+  };
 
   const toggleQuote = (author) => {
     setExpandedQuotes((current) => {
@@ -78,10 +107,20 @@ export default function Testimonials() {
       <div className="container">
         <div className="section-header">
           <div className="eyebrow">Client experience</div>
-          <h2 className="section-title">What changes when your data works for you.</h2>
+          <h2 id="testimonials-title" className="section-title">
+            What changes when your data works for you.
+          </h2>
         </div>
-        <div className="testimonials">
-          {visibleTestimonials.map((testimonial) => {
+        <div className="testimonial-carousel">
+          <div
+            ref={carouselRef}
+            className="testimonials"
+            role="region"
+            aria-labelledby="testimonials-title"
+            tabIndex="0"
+            onScroll={updateScrollProgress}
+          >
+            {visibleTestimonials.map((testimonial) => {
             const isExpanded = expandedQuotes.has(testimonial.by);
             const isTruncated = testimonial.quote.length > QUOTE_PREVIEW_LENGTH;
             const displayedQuote = isExpanded
@@ -108,7 +147,18 @@ export default function Testimonials() {
                 <cite>{testimonial.by}</cite>
               </blockquote>
             );
-          })}
+            })}
+          </div>
+          <input
+            className="testimonial-slider"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value={scrollProgress}
+            aria-label="Browse testimonials"
+            onInput={moveSlider}
+          />
         </div>
       </div>
     </section>

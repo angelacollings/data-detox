@@ -51,7 +51,7 @@ describe('App', () => {
       screen.getByRole('link', { name: /Explore Client Verification/i })
     ).toBeDefined();
     expect(
-      screen.getByRole('link', { name: /Explore Appraisal Support/i })
+      screen.getByRole('link', { name: /Explore Appraisal Preparation/i })
     ).toBeDefined();
   });
 
@@ -88,22 +88,40 @@ describe('App', () => {
     setPath('/about');
     render(<App />);
     expect(
-      screen.getByText(
-        /more than 1,500 hours working hands-on/i
-      )
+      screen.getByText(/Hi, I'm Donna, the person behind Data Detox/i)
+    ).toBeDefined();
+    expect(screen.getByText(/That's why I started Data Detox/i)).toBeDefined();
+    expect(
+      screen.getByText(/your database finally works the way it should/i)
     ).toBeDefined();
     expect(
       screen.getByRole('heading', { level: 1, name: /About Data Detox/i })
+    ).toBeDefined();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: /A database is only valuable if it works/i,
+      })
+    ).toBeDefined();
+    expect(
+      screen.getByText(/keep their databases accurate, current and ready to use/i)
+    ).toBeDefined();
+    expect(
+      screen.getByText(/Less time behind the computer. More time in front of clients/i)
+    ).toBeDefined();
+    expect(
+      screen.getByRole('img', { name: /Donna, founder of Data Detox/i })
     ).toBeDefined();
     expect(
       screen.queryByRole('link', { name: /Book a 15-minute discovery call/i })
     ).toBeNull();
   });
 
-  it('shows three randomly selected testimonial cards', () => {
+  it('renders all testimonials in a responsive carousel', () => {
     setPath('/');
     const { container } = render(<App />);
-    expect(container.querySelectorAll('.testimonial')).toHaveLength(3);
+    expect(container.querySelectorAll('.testimonial')).toHaveLength(5);
+    expect(screen.getByRole('slider', { name: /Browse testimonials/i })).toBeDefined();
   });
 
   it('allows a shortened testimonial to be expanded', () => {
@@ -151,6 +169,43 @@ describe('App', () => {
     ).toBeDefined();
     expect(
       screen.getByText(/That’s where Data Detox comes in/i)
+    ).toBeDefined();
+  });
+
+  it('renders the full Client Verification content', () => {
+    setPath('/client-verification');
+    render(<App />);
+    expect(
+      screen.getByRole('heading', { level: 1, name: /Client Verification/i })
+    ).toBeDefined();
+    expect(
+      screen.getByText(/information in your NurtureCloud database/i)
+    ).toBeDefined();
+    expect(
+      screen.getByText(/Every conversation is recorded/i)
+    ).toBeDefined();
+    expect(
+      screen.getByText(/referred back to the agent/i)
+    ).toBeDefined();
+    expect(
+      screen.getByText(/stronger foundation for prospecting/i)
+    ).toBeDefined();
+  });
+
+  it('renders the full Appraisal Preparation content', () => {
+    setPath('/appraisal-preparation');
+    render(<App />);
+    expect(
+      screen.getByRole('heading', { level: 1, name: /Appraisal Preparation/i })
+    ).toBeDefined();
+    expect(
+      screen.getByText(/Less time behind the computer/i)
+    ).toBeDefined();
+    expect(
+      screen.getByText(/prepared in Property Smarts/i)
+    ).toBeDefined();
+    expect(
+      screen.getByText(/final appraisal price and commission/i)
     ).toBeDefined();
   });
 

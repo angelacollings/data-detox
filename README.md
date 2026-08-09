@@ -1,6 +1,6 @@
 # Data Detox
 
-A small React/Vite website for Data Detox, a service for real estate salespeople who need cleaner database information, appraisal calling, and desktop appraisal support.
+A small React/Vite website for Data Detox, a service for real estate salespeople who need cleaner database information, appraisal calling, and desktop appraisal preparation.
 
 The current site is intentionally simple: explain the services, build trust, and send interested salespeople to the contact form.
 

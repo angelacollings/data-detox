@@ -36,7 +36,7 @@ const pages = {
       },
       {
         heading: 'Quotes and scope',
-        body: 'Any quotes or service descriptions are subject to the condition and size of the database, the calling requirements, and the appraisal support requested.',
+        body: 'Any quotes or service descriptions are subject to the condition and size of the database, the calling requirements, and the appraisal preparation requested.',
       },
       {
         heading: 'Client responsibility',

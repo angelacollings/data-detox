@@ -286,7 +286,7 @@ $service = post_value('service', 80);
 $serviceLabels = [
     'database-revitalisation' => 'Database revitalisation',
     'client-verification' => 'Client verification',
-    'appraisal-support' => 'Appraisal support',
+    'appraisal-preparation' => 'Appraisal preparation',
     'database-health' => 'Ongoing database health',
     'unsure' => 'Not sure yet',
 ];

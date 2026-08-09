@@ -8,7 +8,7 @@ const routes = [
   'about',
   'database-revitalisation',
   'client-verification',
-  'appraisal-support',
+  'appraisal-preparation',
   'privacy',
   'terms',
 ];

@@ -19,7 +19,7 @@ export default function WhyDataDetox() {
           </p>
           <p>
             With more than 1,500 hours working hands-on in real estate databases, I know
-            how to refresh databases that have become difficult to use—and
+            how to refresh databases that have become difficult to use and
             revitalise them as valuable business assets.
           </p>
           <div className="why-signoff">
