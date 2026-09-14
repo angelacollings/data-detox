@@ -8,10 +8,10 @@ export default function Header() {
           <a className="brand-logo" href="/" aria-label="Data Detox home">
             <span className="brand-logo-crop" aria-hidden="true">
               <img
-                src="/assets/data-detox-logo-header.webp"
+                src="/assets/data-detox-logo-header-transparent.png"
                 alt=""
-                width="480"
-                height="320"
+                width="1536"
+                height="1024"
               />
             </span>
           </a>

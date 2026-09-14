@@ -284,10 +284,12 @@ $message = post_value('message', 3000);
 $service = post_value('service', 80);
 
 $serviceLabels = [
-    'database-revitalisation' => 'Database revitalisation',
-    'client-verification' => 'Client verification',
-    'appraisal-preparation' => 'Appraisal preparation',
-    'database-health' => 'Ongoing database health',
+    'database-revitalisation' => 'Database reactivation',
+    'client-verification' => 'Past client reconnection',
+    'appraisal-preparation' => 'Appraisal follow-up',
+    'database-deep-dive' => 'Database deep dive',
+    'database-clean-up' => 'Database clean-up',
+    'farm-area-research' => 'Farm-area research',
     'unsure' => 'Not sure yet',
 ];
 

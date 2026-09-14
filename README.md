@@ -1,6 +1,6 @@
 # Data Detox
 
-A small React/Vite website for Data Detox, a service for real estate salespeople who need cleaner database information, appraisal calling, and desktop appraisal preparation.
+A small React/Vite website for Data Detox, a project-based database reactivation service for real estate salespeople. Donna calls neglected contacts, follows up past clients and appraisals, and updates CRM information as she works.
 
 The current site is intentionally simple: explain the services, build trust, and send interested salespeople to the contact form.
 

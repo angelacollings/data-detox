@@ -21,7 +21,7 @@ describe('App', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /Make your database work for you/i,
+        name: /Reconnect with the people already in your database/i,
       })
     ).toBeDefined();
   });
@@ -40,18 +40,18 @@ describe('App', () => {
     expect(
       screen.getByRole('heading', {
         level: 2,
-        name: /Make your database useful again/i,
+        name: /The follow-up that has fallen through the gaps/i,
       })
     ).toBeDefined();
     expect(container.querySelector('h3.section-title')).toBeNull();
     expect(
-      screen.getByRole('link', { name: /Explore Database Revitalisation/i })
+      screen.getByRole('link', { name: /Explore Database Reactivation/i })
     ).toBeDefined();
     expect(
-      screen.getByRole('link', { name: /Explore Client Verification/i })
+      screen.getByRole('link', { name: /Explore Past Client Reconnection/i })
     ).toBeDefined();
     expect(
-      screen.getByRole('link', { name: /Explore Appraisal Preparation/i })
+      screen.getByRole('link', { name: /Explore Appraisal Follow-Up/i })
     ).toBeDefined();
   });
 
@@ -60,7 +60,7 @@ describe('App', () => {
     render(<App />);
     expect(
       screen.getByText(
-        /organises and updates your database/i
+        /make the calls that haven't been made/i
       )
     ).toBeDefined();
   });
@@ -68,10 +68,10 @@ describe('App', () => {
   it('renders the hero outcomes card', () => {
     setPath('/');
     render(<App />);
-    expect(screen.getAllByText(/Confident prospecting/i)).toHaveLength(2);
-    expect(screen.getByText(/Clear follow-up opportunities/i)).toBeDefined();
+    expect(screen.getByText(/Calls made personally by Donna/i)).toBeDefined();
+    expect(screen.getByText(/Clear notes and opportunities handed back/i)).toBeDefined();
     expect(
-      screen.getByText(/More productive time for salespeople/i)
+      screen.getByText(/One defined database project/i)
     ).toBeDefined();
   });
 
@@ -79,7 +79,7 @@ describe('App', () => {
     setPath('/');
     render(<App />);
     expect(
-      screen.getByRole('heading', { name: /From uncertain data/i })
+      screen.getByRole('heading', { name: /A clear start, a systematic process/i })
     ).toBeDefined();
     expect(screen.getAllByRole('listitem')).toHaveLength(7);
   });
@@ -88,7 +88,7 @@ describe('App', () => {
     setPath('/about');
     render(<App />);
     expect(
-      screen.getByText(/Hi, I'm Donna, the person behind Data Detox/i)
+      screen.getByText(/I've worked on both sides of real estate/i)
     ).toBeDefined();
     expect(screen.getByText(/That's why I started Data Detox/i)).toBeDefined();
     expect(
@@ -100,14 +100,14 @@ describe('App', () => {
     expect(
       screen.getByRole('heading', {
         level: 2,
-        name: /A database is only valuable if it works/i,
+        name: /Reconnect the people. Improve the information/i,
       })
     ).toBeDefined();
     expect(
-      screen.getByText(/keep their databases accurate, current and ready to use/i)
+      screen.getByText(/complete the follow-up that gets pushed aside/i)
     ).toBeDefined();
     expect(
-      screen.getByText(/Less time behind the computer. More time in front of clients/i)
+      screen.getByText(/defined project, not an ongoing admin service/i)
     ).toBeDefined();
     expect(
       screen.getByRole('img', { name: /Donna, founder of Data Detox/i })
@@ -139,7 +139,7 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByLabelText(/Name/i)).toBeDefined();
     expect(screen.getByLabelText(/Email/i)).toBeDefined();
-    expect(screen.getByLabelText(/What do you need help with/i)).toBeDefined();
+    expect(screen.getByLabelText(/What would you like me to work through/i)).toBeDefined();
     expect(
       screen.getByRole('button', { name: /Request a discovery call/i })
     ).toBeDefined();
@@ -152,23 +152,23 @@ describe('App', () => {
     expect(screen.getByRole('alert')).toBeDefined();
     expect(screen.getByText(/Enter your name/i)).toBeDefined();
     expect(screen.getByText(/Enter your email address/i)).toBeDefined();
-    expect(screen.getByText(/Tell us what you need help with/i)).toBeDefined();
+    expect(screen.getByText(/Tell me what you would like me to work through/i)).toBeDefined();
   });
 
   it('renders a dedicated service page', () => {
     setPath('/database-revitalisation');
     render(<App />);
     expect(
-      screen.getByRole('heading', { level: 1, name: /Database Revitalisation/i })
+      screen.getByRole('heading', { level: 1, name: /Database Reactivation/i })
     ).toBeDefined();
     expect(
       screen.getByRole('link', { name: /Back to services/i })
     ).toBeDefined();
     expect(
-      screen.getByText(/A real estate database is never finished/i)
+      screen.getByText(/Reconnect with the contacts who haven’t been spoken to recently/i)
     ).toBeDefined();
     expect(
-      screen.getByText(/That’s where Data Detox comes in/i)
+      screen.getByText(/I make the calls/i)
     ).toBeDefined();
   });
 
@@ -176,19 +176,19 @@ describe('App', () => {
     setPath('/client-verification');
     render(<App />);
     expect(
-      screen.getByRole('heading', { level: 1, name: /Client Verification/i })
+      screen.getByRole('heading', { level: 1, name: /Past Client Reconnection/i })
     ).toBeDefined();
     expect(
-      screen.getByText(/information in your NurtureCloud database/i)
+      screen.getByText(/Reconnect with past clients/i)
     ).toBeDefined();
     expect(
-      screen.getByText(/Every conversation is recorded/i)
+      screen.getByText(/record the outcome of each conversation/i)
     ).toBeDefined();
     expect(
-      screen.getByText(/referred back to the agent/i)
+      screen.getByText(/hand it back for your follow-up/i)
     ).toBeDefined();
     expect(
-      screen.getByText(/stronger foundation for prospecting/i)
+      screen.getByText(/clearer picture of the relationship today/i)
     ).toBeDefined();
   });
 
@@ -196,16 +196,16 @@ describe('App', () => {
     setPath('/appraisal-preparation');
     render(<App />);
     expect(
-      screen.getByRole('heading', { level: 1, name: /Appraisal Preparation/i })
+      screen.getByRole('heading', { level: 1, name: /Appraisal Follow-Up/i })
     ).toBeDefined();
     expect(
-      screen.getByText(/Less time behind the computer/i)
+      screen.getByText(/previously appraised/i)
     ).toBeDefined();
     expect(
-      screen.getByText(/prepared in Property Smarts/i)
+      screen.getByText(/defined group of older appraisals/i)
     ).toBeDefined();
     expect(
-      screen.getByText(/final appraisal price and commission/i)
+      screen.getByText(/Not every call will lead to an appraisal/i)
     ).toBeDefined();
   });
 

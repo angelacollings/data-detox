@@ -6,9 +6,9 @@ const siteUrl = 'https://datadetox.co.nz';
 
 const routes = {
   about: {
-    title: 'About Data Detox | Real Estate Database Specialist',
+    title: 'About Donna | Real Estate Database Support NZ | Data Detox',
     description:
-      'Learn about Donna’s hands-on experience helping real estate salespeople maintain accurate, prospecting-ready databases.',
+      'Meet Donna and learn about her hands-on experience calling contacts, updating CRM records and completing one-off real estate database projects.',
   },
   privacy: {
     title: 'Privacy Policy | Data Detox',
@@ -21,19 +21,19 @@ const routes = {
       'The terms for using the Data Detox website and enquiring about our real estate database services.',
   },
   'database-revitalisation': {
-    title: 'Real Estate Database Revitalisation NZ | Data Detox',
+    title: 'Real Estate Database Reactivation NZ | Data Detox',
     description:
-      'We clean and organise real estate databases so salespeople can work with accurate records and uncover qualified appraisal opportunities.',
+      'Donna calls neglected real estate database contacts, updates CRM records and hands genuine follow-up opportunities back to the salesperson.',
   },
   'client-verification': {
-    title: 'Client Verification for Real Estate NZ | Data Detox',
+    title: 'Past Client Follow-Up for Real Estate NZ | Data Detox',
     description:
-      'Professional client verification for New Zealand real estate salespeople, focused on updating contact details and uncovering opportunities.',
+      'Reconnect with past real estate clients through a defined calling project, with details updated and opportunities handed back for follow-up.',
   },
   'appraisal-preparation': {
-    title: 'Appraisal Preparation NZ | Data Detox',
+    title: 'Real Estate Appraisal Follow-Up NZ | Data Detox',
     description:
-      'Professional desktop appraisal preparation in Property Smarts for real estate salespeople who want more time with clients.',
+      'Follow up old real estate appraisals with personal calls, updated CRM information and interested contacts handed back to the salesperson.',
   },
 };
 

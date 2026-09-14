@@ -2,20 +2,20 @@ import React from 'react';
 
 const steps = [
   {
-    title: 'Discover',
-    description: 'We discuss your business, your database and what better data needs to make possible for you.',
+    title: 'Identify',
+    description: 'We talk about what’s been neglected — old appraisals, past clients, contacts who haven’t been called or another part of your database that needs attention.',
   },
   {
-    title: 'Assess',
-    description: 'I review the current state of your records and identify the areas that will create the most useful improvement.',
+    title: 'Agree',
+    description: 'We agree on a defined project and what you’d like me to work through.',
   },
   {
-    title: 'Revitalise',
-    description: 'I verify client information, organise records, complete agreed appraisal work and improve the overall quality of your database.',
+    title: 'Work through it',
+    description: 'I get into the database and start working through the contacts — making calls, updating information, cleaning records and recording the outcome as I go.',
   },
   {
-    title: 'Handover',
-    description: 'You receive a clearer, more reliable database that is ready for confident, consistent prospecting.',
+    title: 'Hand back the opportunities',
+    description: 'When someone needs an appraisal, is thinking about selling or needs a conversation with their salesperson, I hand that opportunity back to you. Once the agreed project is complete, we’re done.',
   },
 ];
 
@@ -28,9 +28,9 @@ export default function HowItWorks() {
     >
       <div className="container">
         <div className="section-header">
-          <div className="eyebrow">A clear, careful process</div>
-          <h2 id="how-it-works-title" className="section-title">From uncertain data to confident prospecting.</h2>
-          <p>You know where the project is heading, what is being improved and what you will receive.</p>
+          <div className="eyebrow">How a project works</div>
+          <h2 id="how-it-works-title" className="section-title">A clear start, a systematic process and a defined finish.</h2>
+          <p>No ongoing admin contract — just the agreed part of your database worked through properly.</p>
         </div>
         <ol className="steps-grid">
           {steps.map((step, index) => (

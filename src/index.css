@@ -210,6 +210,9 @@ body {
   font-weight: 800;
   max-width: 13ch;
 }
+.hero-text .hero-supporting-statement + .hero-supporting-statement {
+  margin-top: 14px;
+}
 .hero-text p {
   margin: 0 0 18px;
   color: var(--muted);
@@ -309,6 +312,41 @@ body {
   box-shadow: var(--card-shadow);
   border-top: 0;
   transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.service-secondary {
+  background: var(--accent-soft);
+  border-style: dashed;
+}
+
+.results-section,
+.cleaning-section {
+  background: var(--panel);
+}
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap);
+}
+.outcome {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+.outcome span {
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+.project-section {
+  background: var(--brand-dark);
+  color: #fff;
+}
+.project-section .eyebrow,
+.project-section .why-copy p {
+  color: #d9ebe5;
 }
 .service:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .service h3 {
@@ -461,6 +499,12 @@ body {
   gap: 18px;
   justify-content: space-between;
   align-items: center;
+}
+.stats-header {
+  max-width: 780px;
+}
+.stats-header p + p {
+  margin-top: 14px;
 }
 .stat {
   flex: 1;
@@ -691,6 +735,12 @@ body {
 .contact-form [aria-invalid='true'] {
   border-color: #a83b3b;
 }
+.form-helper {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
 .contact-form textarea {
   min-height: 116px;
   resize: vertical;
@@ -824,7 +874,8 @@ body {
 /* responsive */
 @media (max-width: 980px) {
   .services-grid,
-  .steps-grid {
+  .steps-grid,
+  .outcomes-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .testimonials {
@@ -841,6 +892,9 @@ body {
 @media (max-width: 720px) {
   :root {
     --anchor-offset: 108px;
+  }
+  .outcomes-grid {
+    grid-template-columns: 1fr;
   }
   .site-header .container {
     flex-wrap: wrap;

@@ -12,24 +12,24 @@ export default function About() {
           <div className="section-header about-page-header">
             <h1>About Data Detox</h1>
             <p>
-              Practical database support, built on first-hand
-              experience of how individual real estate salespeople actually work.
+              Hands-on database reactivation, built on first-hand experience of
+              how individual real estate salespeople actually work.
             </p>
           </div>
 
           <div className="about-vision">
             <div>
-              <div className="about-section-label">Our Vision</div>
-              <h2>A database is only valuable if it works.</h2>
+              <div className="about-section-label">The purpose</div>
+              <h2>Reconnect the people. Improve the information.</h2>
             </div>
             <div className="about-vision-copy">
               <p>
-                Our vision is to help real estate professionals keep their
-                databases accurate, current and ready to use. Because when you
-                trust your information, it&apos;s easier to stay in touch with
-                clients, recognise opportunities and focus on what you do best.
+                I help real estate salespeople complete the follow-up that gets
+                pushed aside: making the calls, reconnecting with contacts and
+                following up old appraisals. I update the database as I go and
+                hand genuine opportunities back to the salesperson.
               </p>
-              <p>Less time behind the computer. More time in front of clients.</p>
+              <p>Each piece of work is a defined project, not an ongoing admin service.</p>
             </div>
           </div>
 
@@ -45,35 +45,28 @@ export default function About() {
               <div className="about-section-label">Behind Data Detox</div>
               <h3 id="donna-title">Meet Donna</h3>
               <p>
-                Hi, I&apos;m Donna, the person behind Data Detox.
+                I&apos;m Donna, and I&apos;ve worked on both sides of real estate — as a
+                salesperson and in administration.
               </p>
               <p>
-                I&apos;ve worked in real estate as both a salesperson and a personal
-                assistant, so I&apos;ve seen firsthand how important a good database
-                is, and how quickly it can become overwhelming when you get busy.
-              </p>
-              <p>
-                Time and time again, I watched databases become something people
-                avoided. Not because they didn&apos;t care, but because selling
-                property always came first. The problem was that no one had the
-                time to bring everything back up to date.
+                I&apos;ve seen how easily database follow-up gets pushed aside when
+                you&apos;re busy listing, selling and looking after the clients who
+                need you today.
               </p>
               <p>That&apos;s why I started Data Detox.</p>
               <p>
-                I genuinely enjoy bringing order to chaos. I love taking
-                something that&apos;s become difficult to use and turning it into a
-                database that agents can trust again. For me, every piece of
-                information in a database has a purpose. If it doesn&apos;t add
-                value, it probably doesn&apos;t belong there.
+                I take on one-off database projects and do the work that has been
+                sitting at the bottom of the list — making the calls,
+                reconnecting with contacts, following up old appraisals and
+                updating the database as I go.
               </p>
               <p>
-                I don&apos;t want to be the person with my name up in lights. I&apos;m
-                happiest being part of the support crew, helping agents behind
-                the scenes so they can spend more time building relationships,
-                winning listings, and growing their business.
+                I&apos;m not a call centre and Data Detox is not an automated
+                service. I do the work myself, record the outcome of each
+                conversation and hand opportunities back to the salesperson.
               </p>
               <p>
-                Over the years, I&apos;ve also worked in client contact roles,
+                I&apos;ve also worked in client contact roles,
                 including cold calling and fundraising, so picking up the phone
                 and having genuine conversations comes naturally to me. Those
                 conversations don&apos;t just keep your database accurate, they
@@ -86,7 +79,7 @@ export default function About() {
                 it&apos;s years of relationships, conversations, and future
                 business. I genuinely enjoy helping people look after one of
                 their most valuable business assets and seeing the difference a
-                well maintained database can make.
+                well-maintained database can make.
               </p>
               <p>
                 If, after working together, you feel a sense of relief because

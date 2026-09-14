@@ -3,50 +3,53 @@ import PropTypes from 'prop-types';
 
 const pages = {
   'database-revitalisation': {
-    title: 'Database Revitalisation',
+    title: 'Database Reactivation',
     intro:
-      'A real estate database is never finished. People move house, change phone numbers, update email addresses, and their property plans change over time. Because salespeople are busy listing and selling, keeping the database up to date often slips down the priority list.',
+      'Reconnect with the contacts who haven’t been spoken to recently and the people who have fallen through the gaps.',
     body: [
-      'That’s where Data Detox comes in.',
-      'I work through your database to make sure the information is accurate, consistent, and easy to use. I update contact details, organise attributes and lead scores, record clear notes, remove duplicate information, and make sure your database reflects what’s happening today, not what was happening three years ago.',
-      'As part of the process, I can also contact past clients to confirm their details and offer an updated appraisal where appropriate. If someone mentions they’re thinking about buying or selling, I record the information and pass it back to the salesperson to follow up.',
-      'When the work is finished, your database is easier to search, easier to trust, and ready to support your prospecting. A healthy database helps salespeople reconnect with clients, identify opportunities, and spend more time building relationships instead of searching for information.',
+      'I make the calls.',
+      'We agree on a neglected part of your database and I work through it systematically. That might be contacts who have not heard from you recently, people who were never properly followed up, or records that no longer tell you where the relationship stands.',
+      'As I speak with people, I update contact details, property information and clear notes. I also identify duplicates and correct information that is incomplete or out of date.',
+      'If someone wants an appraisal, is considering selling or needs real estate advice, I hand the opportunity back to the salesperson. Not every call creates a lead, but every completed conversation gives you clearer information and follow-up.',
+      'Once the agreed section has been worked through, the project is complete.',
     ],
     benefits: [
-      'Accurate contact details, attributes and lead scores',
-      'Clear notes and duplicate information removed',
-      'Past-client verification and appraisal conversations',
-      'Useful opportunities recorded for your follow-up',
+      'Calls made to neglected contacts',
+      'Current details and clear conversation notes',
+      'Duplicates and incomplete records identified',
+      'Genuine opportunities handed back for follow-up',
     ],
   },
   'client-verification': {
-    title: 'Client Verification',
+    title: 'Past Client Reconnection',
     intro:
-      'Over time, contact details change, people move, and property plans evolve. Client Verification is designed to make sure the information in your NurtureCloud database is accurate and up to date.',
+      'Reconnect with past clients and find out what has changed since you last spoke.',
     body: [
-      'I call through your database to confirm phone numbers, email addresses, postal addresses, and other key contact information. Every conversation is recorded, ensuring your CRM reflects current information and giving your team confidence in the data they’re using.',
-      'These conversations also provide a natural opportunity to offer an updated appraisal and identify clients who may be considering buying or selling. Any opportunities are recorded and referred back to the agent, so they can continue the conversation and provide the right advice.',
-      'By the end of the process, your database is more accurate, your client records are more complete, and your team has a stronger foundation for prospecting and relationship building.',
+      'I make the calls.',
+      'We define the group of past clients you want reconnected with and I work through them. I confirm phone numbers, email addresses, property details and other useful information, then record the outcome of each conversation in your CRM.',
+      'If someone would benefit from an appraisal, is considering a move or needs a conversation with you, I flag that opportunity and hand it back for your follow-up.',
+      'At the end of the project, more of your past clients have heard from you and their records give you a clearer picture of the relationship today.',
     ],
     benefits: [
       'Reconnect with contacts in an established database',
-      'Confirm and update useful contact details',
-      'Record relevant information for future follow-up',
+      'Confirm and update useful contact and property details',
+      'Hand relevant conversations back to the salesperson',
     ],
   },
   'appraisal-preparation': {
-    title: 'Appraisal Preparation',
+    title: 'Appraisal Follow-Up',
     intro:
-      'Less time behind the computer. More time in front of clients.',
+      'Follow up people you have previously appraised and find out whether they would like an updated appraisal.',
     body: [
-      'When appraisal requests start coming in, the preparation can quickly become time-consuming. Data Detox can take care of the groundwork, so you can focus on meeting with clients, listing property, and growing your business.',
-      'Each desktop appraisal is prepared in Property Smarts with the property details completed, a professionally written property description, and three carefully selected comparable sales with a brief summary of each. Everything is prepared and ready for your final review.',
-      'The final appraisal price and commission are left for you to complete. You remain in control of your professional advice, while Data Detox takes care of the preparation behind the scenes, helping you respond to appraisal requests more efficiently.',
+      'I make the calls.',
+      'We agree on a defined group of older appraisals and I work through them systematically. I reconnect with each person, check whether their plans or circumstances have changed and ask whether an updated appraisal would be useful.',
+      'I update their details and record the result of the conversation as I go. When someone is interested in an updated appraisal or needs real estate advice, I hand that contact back to you to continue the conversation.',
+      'Not every call will lead to an appraisal. The value is in completing neglected follow-up properly, identifying the opportunities that are there and leaving accurate information behind.',
     ],
     benefits: [
-      'Property details completed in Property Smarts',
-      'A professionally written property description',
-      'Three carefully selected and summarised comparable sales',
+      'Older appraisals followed up personally',
+      'Contact and property information updated',
+      'Interested contacts handed back to you',
     ],
   },
 };

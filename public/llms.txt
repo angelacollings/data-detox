@@ -1,16 +1,18 @@
 # Data Detox
 
-Data Detox provides database support for individual real estate salespeople
-throughout New Zealand. The site is public and may be crawled to understand its
-services and business information.
+Data Detox provides project-based database reactivation for individual real
+estate salespeople throughout New Zealand. Donna personally calls neglected
+contacts, updates CRM information and hands genuine opportunities back to the
+salesperson. The site is public and may be crawled to understand its services
+and business information.
 
 ## Main pages
 
 - [Home](https://datadetox.co.nz/): Overview of Data Detox and its services.
 - [About](https://datadetox.co.nz/about/): Background and experience.
-- [Database Revitalisation](https://datadetox.co.nz/database-revitalisation/): Real estate database refreshing, enrichment and organisation.
-- [Client Verification](https://datadetox.co.nz/client-verification/): Database calling and contact verification.
-- [Appraisal Preparation](https://datadetox.co.nz/appraisal-preparation/): Desktop appraisal preparation for real estate salespeople.
+- [Database Reactivation](https://datadetox.co.nz/database-revitalisation/): Calling neglected real estate contacts and updating records as the project progresses.
+- [Past Client Reconnection](https://datadetox.co.nz/client-verification/): Personal calls to reconnect with past clients and identify follow-up.
+- [Appraisal Follow-Up](https://datadetox.co.nz/appraisal-preparation/): Following up older appraisals and handing interested contacts back to the salesperson.
 
 ## Policies
 

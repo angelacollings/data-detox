@@ -2,31 +2,28 @@ import React from 'react';
 
 const items = [
   {
-    title: 'Database Revitalisation',
-    desc: 'Refresh and strengthen your database by correcting inaccurate information, resolving duplication and organising records so you can find what you need quickly.',
+    title: 'Database Reactivation',
+    desc: 'Work through contacts who haven’t been spoken to recently and reconnect with the people who have fallen through the gaps. As I make the calls, I update contact information, correct records and clean the database as I go.',
     href: '/database-revitalisation/',
   },
   {
-    title: 'Client Verification',
-    desc: 'Reconnect with past clients, verify contact details and identify conversations or opportunities that need your follow-up.',
+    title: 'Past Client Reconnection',
+    desc: 'Reconnect with past clients and find out what’s changed since you last spoke. I’ll make the calls, update their details and flag anyone who would benefit from a conversation with you.',
     href: '/client-verification/',
   },
   {
-    title: 'Appraisal Preparation',
-    desc: 'Complete appraisal update calls and prepare desktop appraisals, giving you more time to focus on listing, selling and client relationships.',
+    title: 'Appraisal Follow-Up',
+    desc: 'Follow up people you’ve previously appraised and find out whether they’d like an updated appraisal. I make the calls, update their information and hand interested contacts back to you to continue the conversation.',
     href: '/appraisal-preparation/',
   },
   {
-    title: 'Ongoing Database Health',
-    desc: 'Keep your database organised, searchable and ready to support consistent prospecting long after the initial revitalisation project is complete.',
+    title: 'Database Deep Dive',
+    desc: 'Not sure where the gaps are? I’ll work through your database to identify contacts who haven’t been called, old appraisals that need following up, incomplete records, duplicates and areas where opportunities may have been missed.',
   },
   {
-    title: 'Overall Database Check-in',
-    desc: 'We review your database to find the gaps, highlight incomplete information and identify where updates could make it more useful.',
-  },
-  {
-    title: 'Need a New Farm Area?',
-    desc: 'We can assess your chosen area and help identify relevant contacts you may not already have in your database, giving you a stronger place to start prospecting.',
+    title: 'Farm Area Research',
+    desc: 'Building a new farm area? I can research your chosen area, identify people you already know and help build the contact information you need to start prospecting.',
+    secondary: true,
   },
 ];
 
@@ -35,16 +32,16 @@ export default function Services() {
     <section id="services" className="section">
       <div className="container">
         <div className="section-header">
-          <div className="eyebrow">Where we help</div>
-          <h2 className="section-title">Make your database useful again.</h2>
+          <div className="eyebrow">What I can work through</div>
+          <h2 className="section-title">The follow-up that has fallen through the gaps.</h2>
           <p>
-            This is more than a data tidy-up. It is practical database support that
-            helps you work with better information and clearer priorities.
+            Each service is a defined project. I personally make the calls,
+            update the records and hand opportunities back to the salesperson.
           </p>
         </div>
         <div className="services-grid">
           {items.map((s) => (
-            <article key={s.title} className="service">
+            <article key={s.title} className={`service${s.secondary ? ' service-secondary' : ''}`}>
               <h3>{s.title}</h3>
               <p>{s.desc}</p>
               {s.href && (

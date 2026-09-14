@@ -5,12 +5,16 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero-inner">
         <div className="hero-text">
-          <div className="eyebrow">Database support for real estate</div>
-          <h1>Make your database work for you.</h1>
+          <div className="eyebrow">Real estate database reactivation</div>
+          <h1>Reconnect with the people already in your database.</h1>
           <p className="hero-supporting-statement">
-            Data Detox organises and updates your database, so you
-            can prospect with confidence, follow up consistently and act on the
-            right opportunities.
+            I work through your database, make the calls that haven&apos;t been
+            made, follow up old appraisals and reconnect with contacts you&apos;ve
+            lost touch with.
+          </p>
+          <p className="hero-supporting-statement">
+            Along the way, I update and clean your data so you know exactly who
+            you&apos;ve spoken to and where the opportunities are.
           </p>
           <div className="hero-actions">
             <a className="btn" href="#contact">
@@ -21,16 +25,16 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <aside className="hero-card" aria-label="The result of a healthier database">
-          <div className="hero-card-kicker">The result</div>
+        <aside className="hero-card" aria-label="A hands-on, project-based service">
+          <div className="hero-card-kicker">A hands-on service</div>
           <p className="hero-card-quote">
-            A database you can trust, not another job waiting at the bottom of
-            your list.
+            I make the calls, update the records and hand genuine opportunities
+            back to you.
           </p>
           <div className="hero-card-list">
-            <div><span aria-hidden="true">✓</span>Confident prospecting</div>
-            <div><span aria-hidden="true">✓</span>Clear follow-up opportunities</div>
-            <div><span aria-hidden="true">✓</span>More productive time for salespeople</div>
+            <div><span aria-hidden="true">✓</span>One defined database project</div>
+            <div><span aria-hidden="true">✓</span>Calls made personally by Donna</div>
+            <div><span aria-hidden="true">✓</span>Clear notes and opportunities handed back</div>
           </div>
         </aside>
       </div>

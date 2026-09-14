@@ -33,7 +33,7 @@ export default function ContactForm() {
     }
 
     if (!message.value.trim()) {
-      nextErrors.message = 'Tell us what you need help with.';
+      nextErrors.message = 'Tell me what you would like me to work through.';
     }
 
     if (Object.keys(nextErrors).length > 0) {
@@ -51,12 +51,12 @@ export default function ContactForm() {
           <h2 className="section-title">Let&apos;s see if we&apos;re a good fit.</h2>
           <p>
             Every salesperson&apos;s database is different. Book a 15-minute phone
-            or Zoom call and we&apos;ll discuss your database, your goals and whether
-            Data Detox is the right solution for you.
+            or Zoom call and we&apos;ll discuss what has been missed, what a defined
+            project could cover and whether Data Detox is the right fit.
           </p>
           <ul className="contact-points">
             <li>No obligation and no hard sell</li>
-            <li>A practical conversation about your current database</li>
+            <li>A practical conversation about what&apos;s being missed in your database</li>
             <li>A clear next step if Data Detox can help</li>
           </ul>
           <p className="contact-direct">
@@ -145,17 +145,23 @@ export default function ContactForm() {
             </label>
           </div>
           <label>
-            What do you need help with?
+            What would you like me to work through?
             <select name="service" defaultValue="">
               <option value="" disabled>
                 Select an area
               </option>
-              <option value="database-revitalisation">Database revitalisation</option>
-              <option value="client-verification">Client verification</option>
-              <option value="appraisal-preparation">Appraisal preparation</option>
-              <option value="database-health">Ongoing database health</option>
+              <option value="database-revitalisation">Database reactivation</option>
+              <option value="client-verification">Past client reconnection</option>
+              <option value="appraisal-preparation">Appraisal follow-up</option>
+              <option value="database-deep-dive">Database deep dive</option>
+              <option value="database-clean-up">Database clean-up</option>
+              <option value="farm-area-research">Farm-area research</option>
               <option value="unsure">Not sure yet</option>
             </select>
+            <small className="form-helper">
+              Old appraisals, past clients, contacts you haven&apos;t spoken to,
+              database clean-up, farm-area research or something else.
+            </small>
           </label>
           <label>
             <span>
