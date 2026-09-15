@@ -53,6 +53,9 @@ describe('App', () => {
     expect(
       screen.getByRole('link', { name: /Explore Appraisal Follow-Up/i })
     ).toBeDefined();
+    expect(
+      screen.getByRole('heading', { level: 3, name: /Farm Area Research/i })
+    ).toBeDefined();
   });
 
   it('renders the supporting hero statement', () => {

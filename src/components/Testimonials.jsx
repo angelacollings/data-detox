@@ -108,7 +108,7 @@ export default function Testimonials() {
         <div className="section-header">
           <div className="eyebrow">Client experience</div>
           <h2 id="testimonials-title" className="section-title">
-            What changes when your data works for you.
+            What clients say about working with Donna.
           </h2>
         </div>
         <div className="testimonial-carousel">

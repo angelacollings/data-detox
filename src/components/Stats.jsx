@@ -4,14 +4,14 @@ export default function Stats() {
   const stats = [
     { label: 'Contacts cleaned', value: '7,500+' },
     { label: 'Lead scores updated', value: '4,000+' },
-    { label: 'Database experience', value: '1,500+ hrs' },
+    { label: 'Hands-on database experience', value: '1,500+ hrs' },
   ];
 
   return (
     <section className="section stats">
       <div className="container">
         <div className="section-header stats-header">
-          <div className="eyebrow">Practical experience</div>
+          <div className="eyebrow">Hands-on experience</div>
           <h2 className="section-title">Database knowledge built through real conversations.</h2>
           <p>
             I&apos;ve spent more than 1,500 hours working inside Ray White CRM
@@ -20,7 +20,7 @@ export default function Stats() {
             existing databases.
           </p>
           <p>
-            That experience means I understand both sides of the job: the
+            That experience means I understand both sides of the job — the
             information inside the CRM and the real conversations behind it.
           </p>
         </div>

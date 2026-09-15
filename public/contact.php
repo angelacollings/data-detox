@@ -289,7 +289,7 @@ $serviceLabels = [
     'appraisal-preparation' => 'Appraisal follow-up',
     'database-deep-dive' => 'Database deep dive',
     'database-clean-up' => 'Database clean-up',
-    'find-someone' => 'Help finding someone',
+    'farm-area-research' => 'Farm-area research',
     'unsure' => 'Not sure yet',
 ];
 
@@ -353,4 +353,4 @@ if (!$sent) {
     send_response(500, 'Message not sent', 'Something went wrong while sending your enquiry. Please try again later.');
 }
 
-send_response(200, 'Message sent', 'Thanks. Your enquiry has been received and we will follow up soon.');
+send_response(200, 'Message sent', 'Thanks. Your enquiry has been received and I will be in touch soon.');
