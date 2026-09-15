@@ -289,7 +289,7 @@ $serviceLabels = [
     'appraisal-preparation' => 'Appraisal follow-up',
     'database-deep-dive' => 'Database deep dive',
     'database-clean-up' => 'Database clean-up',
-    'farm-area-research' => 'Farm-area research',
+    'find-someone' => 'Help finding someone',
     'unsure' => 'Not sure yet',
 ];
 

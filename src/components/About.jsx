@@ -12,8 +12,8 @@ export default function About() {
           <div className="section-header about-page-header">
             <h1>About Data Detox</h1>
             <p>
-              Hands-on database reactivation, built on first-hand experience of
-              how individual real estate salespeople actually work.
+              Database reactivation shaped by years of working with real estate
+              salespeople and their clients.
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export default function About() {
               <div className="about-section-label">Behind Data Detox</div>
               <h3 id="donna-title">Meet Donna</h3>
               <p>
-                I&apos;m Donna, and I&apos;ve worked on both sides of real estate — as a
+                I&apos;m Donna. I&apos;ve worked on both sides of real estate, as a
                 salesperson and in administration.
               </p>
               <p>
@@ -55,10 +55,10 @@ export default function About() {
               </p>
               <p>That&apos;s why I started Data Detox.</p>
               <p>
-                I take on one-off database projects and do the work that has been
-                sitting at the bottom of the list — making the calls,
-                reconnecting with contacts, following up old appraisals and
-                updating the database as I go.
+                I take on individual database projects and tackle the work that
+                has been sitting at the bottom of the list. That means making
+                the calls, reconnecting with contacts, following up old
+                appraisals and updating the database as I go.
               </p>
               <p>
                 I&apos;m not a call centre and Data Detox is not an automated

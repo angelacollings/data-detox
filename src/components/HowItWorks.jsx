@@ -3,7 +3,7 @@ import React from 'react';
 const steps = [
   {
     title: 'Identify',
-    description: 'We talk about what’s been neglected — old appraisals, past clients, contacts who haven’t been called or another part of your database that needs attention.',
+    description: 'We talk about what has been sitting untouched. It could be old appraisals, past clients, contacts who haven’t been called or another part of your database that needs attention.',
   },
   {
     title: 'Agree',
@@ -11,7 +11,7 @@ const steps = [
   },
   {
     title: 'Work through it',
-    description: 'I get into the database and start working through the contacts — making calls, updating information, cleaning records and recording the outcome as I go.',
+    description: 'I get into the database and start working through the contacts. I make the calls, update information, clean the records and note each outcome as I go.',
   },
   {
     title: 'Hand back the opportunities',
@@ -30,7 +30,7 @@ export default function HowItWorks() {
         <div className="section-header">
           <div className="eyebrow">How a project works</div>
           <h2 id="how-it-works-title" className="section-title">A clear start, a systematic process and a defined finish.</h2>
-          <p>No ongoing admin contract — just the agreed part of your database worked through properly.</p>
+          <p>There is no ongoing admin contract. I simply work through the part of your database we agreed on.</p>
         </div>
         <ol className="steps-grid">
           {steps.map((step, index) => (

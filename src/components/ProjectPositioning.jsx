@@ -14,8 +14,8 @@ export default function ProjectPositioning() {
           <p><strong>Data Detox isn&apos;t an ongoing admin service.</strong></p>
           <p>
             We identify the part of your database that needs attention and I
-            work through it — making the calls, updating the records and finding
-            the people who need to hear from you.
+            work through it. I make the calls, update the records and find the
+            people who need to hear from you.
           </p>
           <p>Once we&apos;ve worked through the agreed project, it&apos;s done.</p>
         </div>

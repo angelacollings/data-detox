@@ -21,8 +21,8 @@ const items = [
     desc: 'Not sure where the gaps are? I’ll work through your database to identify contacts who haven’t been called, old appraisals that need following up, incomplete records, duplicates and areas where opportunities may have been missed.',
   },
   {
-    title: 'Farm Area Research',
-    desc: 'Building a new farm area? I can research your chosen area, identify people you already know and help build the contact information you need to start prospecting.',
+    title: 'Looking for Someone?',
+    desc: 'Trying to find a particular person? Share what you know and I can search through the information available, follow the clues and see if I can help you reconnect with them.',
     secondary: true,
   },
 ];

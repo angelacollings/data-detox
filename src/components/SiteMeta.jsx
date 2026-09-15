@@ -14,7 +14,7 @@ const pages = {
   about: {
     title: 'About Donna | Real Estate Database Support NZ | Data Detox',
     description:
-      'Meet Donna and learn about her hands-on experience calling contacts, updating CRM records and completing one-off real estate database projects.',
+      'Meet Donna and learn about her experience calling contacts, updating CRM records and completing defined real estate database projects.',
     path: '/about/',
   },
   privacy: {

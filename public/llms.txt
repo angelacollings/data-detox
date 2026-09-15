@@ -1,6 +1,6 @@
 # Data Detox
 
-Data Detox provides project-based database reactivation for individual real
+Data Detox provides database reactivation projects for individual real
 estate salespeople throughout New Zealand. Donna personally calls neglected
 contacts, updates CRM information and hands genuine opportunities back to the
 salesperson. The site is public and may be crawled to understand its services

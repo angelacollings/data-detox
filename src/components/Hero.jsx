@@ -25,8 +25,8 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <aside className="hero-card" aria-label="A hands-on, project-based service">
-          <div className="hero-card-kicker">A hands-on service</div>
+        <aside className="hero-card" aria-label="A personal database service">
+          <div className="hero-card-kicker">A personal service</div>
           <p className="hero-card-quote">
             I make the calls, update the records and hand genuine opportunities
             back to you.

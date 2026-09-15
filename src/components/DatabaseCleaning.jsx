@@ -14,8 +14,9 @@ export default function DatabaseCleaning() {
           <p>A database is only useful when you can trust what&apos;s in it.</p>
           <p>
             As I work through your contacts, I check and update the information
-            I find — current phone numbers, email addresses, property details,
-            duplicate records and anything else that no longer looks right.
+            I find, including current phone numbers, email addresses, property
+            details, duplicate records and anything else that no longer looks
+            right.
           </p>
           <p>
             So you&apos;re not just reconnecting with people. You&apos;re leaving the

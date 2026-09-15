@@ -155,12 +155,12 @@ export default function ContactForm() {
               <option value="appraisal-preparation">Appraisal follow-up</option>
               <option value="database-deep-dive">Database deep dive</option>
               <option value="database-clean-up">Database clean-up</option>
-              <option value="farm-area-research">Farm-area research</option>
+              <option value="find-someone">Help finding someone</option>
               <option value="unsure">Not sure yet</option>
             </select>
             <small className="form-helper">
               Old appraisals, past clients, contacts you haven&apos;t spoken to,
-              database clean-up, farm-area research or something else.
+              database clean-up, help finding someone or something else.
             </small>
           </label>
           <label>

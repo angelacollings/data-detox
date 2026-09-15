@@ -7,12 +7,12 @@ export default function WhyDataDetox() {
         <div>
           <div className="eyebrow">Why Data Detox</div>
           <h2 id="why-title" className="section-title">
-            Real estate experience. Hands-on database work.
+            Real estate experience, put to work in your database.
           </h2>
         </div>
         <div className="why-copy">
           <p>
-            I&apos;m Donna, and I&apos;ve worked on both sides of real estate — as a
+            I&apos;m Donna. I&apos;ve worked on both sides of real estate, as a
             salesperson and in administration.
           </p>
           <p>
@@ -21,10 +21,10 @@ export default function WhyDataDetox() {
             you today. That&apos;s where I come in.
           </p>
           <p>
-            I take on one-off database projects and do the work that&apos;s been
-            sitting at the bottom of the list — making the calls, reconnecting
-            with contacts, following up old appraisals and updating the database
-            as I go.
+            I take on individual database projects and tackle the work that has
+            been sitting at the bottom of the list. I make the calls, reconnect
+            with contacts, follow up old appraisals and update the database as I
+            go.
           </p>
           <div className="why-signoff">
             <span className="why-monogram" aria-hidden="true">D</span>
